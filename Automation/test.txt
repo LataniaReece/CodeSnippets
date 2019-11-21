@@ -1,0 +1,10 @@
+Hey Tania,
+
+This is a python testing email to see what happens when I attach an email.
+I want to write alot in the message to see what is captured. This is a test
+and I want this to be pretty lengthy. Ok, I think that this is lengthy
+enough. Will stop here. Could have just used Lorem Ipsum but I wanted to
+know the words. I did study Latin. Whatever.
+
+Thanks,
+Latania

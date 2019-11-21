@@ -1,0 +1,48 @@
+Found at this website: https://web.archive.org/web/20151009224806/http://docs.mongodb.org/manual/tutorial/create-an-auto-incrementing-field/
+
+db.counters.insert(
+   {
+      _id: "userid",
+      seq: 0
+   }
+)
+
+function getNextSequence(name) {
+   var ret = db.counters.findAndModify(
+          {
+            query: { _id: name },
+            update: { $inc: { seq: 1 } },
+            new: true
+          }
+   );
+
+   return ret.seq;
+}
+
+db.users.insert(
+   {
+     _id: getNextSequence("userid"),
+     name: "Sarah C."
+   }
+)
+
+db.users.insert(
+   {
+     _id: getNextSequence("userid"),
+     name: "Bob D."
+   }
+)
+
+To verify that the results are as you wanted them: 
+
+db.users.find()
+
+This is what you should see: 
+{
+  _id : 1,
+  name : "Sarah C."
+}
+{
+  _id : 2,
+  name : "Bob D."
+}

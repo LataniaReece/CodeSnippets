@@ -1,0 +1,23 @@
+From: Latania Reece <reecelatania@gmail.com> 
+Date:Sun, 10 Nov 2019 11:28:24 -0500 
+Subject: Python Testing Email  
+Message:
+Hey Tania,
+
+This is a python testing email to see what happens when I attach an email.
+I want to write alot in the message to see what is captured. This is a test
+and I want this to be pretty lengthy. Ok, I think that this is lengthy
+enough. Will stop here. Could have just used Lorem Ipsum but I wanted to
+know the words. I did study Latin. Whatever.
+
+Thanks,
+Latania
+From: Latania Reece <reecelatania@gmail.com> 
+Date:Sun, 10 Nov 2019 12:49:03 -0500 
+Subject:  
+Message:
+Hey again,
+
+Just testing something. What will happen if the attachment is a picture?
+
+Thanks,
