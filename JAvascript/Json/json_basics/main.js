@@ -1,0 +1,1 @@
+//Make your own json object and see how to import it here. Then do something with it in the dom. SAve as codesnippet ie Dom and Json
