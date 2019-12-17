@@ -1,0 +1,39 @@
+{
+	"jsonPeople": [{
+			"firstName": "John",
+			"lastName": "Doe",
+			"age": 26,
+			"job": "doctor"
+		},
+		{
+			"firstName": "Anna",
+			"lastName": "Smith",
+			"age": 30,
+			"job": "lawyer"
+		},
+		{
+			"firstName": "Peter",
+			"lastName": "Jones",
+			"age": 35,
+			"job": "firefighter"
+		},
+		{
+			"firstName": "Thomas",
+			"lastName": "Freddy",
+			"age": 21,
+			"job": "firefighter"
+		},
+		{
+			"firstName": "Melissa",
+			"lastName": "Jones",
+			"age": 22,
+			"job": "Teacher"
+		},
+		{
+			"firstName": "Omari",
+			"lastName": "Thomas",
+			"age": 40,
+			"job": "Construction Worker"
+		}
+	]
+}
