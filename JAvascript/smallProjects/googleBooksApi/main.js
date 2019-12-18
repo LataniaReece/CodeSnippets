@@ -1,11 +1,13 @@
 // GET https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyDGe-7MUReZbEGjPtu1Jp_uO_vB-R5Mzak
 
 let alertBox = document.getElementById("alertBox")
+let displaySearch = document.getElementById("displaySearch")
 let buttonEl = document.getElementById("btn_search")
 buttonEl.addEventListener("click", getBook)
 
 window.addEventListener("load", function() {
-    alertBox.style.display = "none"
+    alertBox.style.visibility = "hidden"
+    displaySearch.style.visibility = "hidden"
 })
 
 function handleErrors(response){
@@ -20,21 +22,28 @@ function getBook(e) {
     let author_search = document.getElementById("query_author").value.trim();
 
     if(title_search == "" && author_search == ""){
-        alertBox.style.display = null;
+        alertBox.style.visibility = "visible";
     }else if (title_search == ""){
-        alertBox.style.display = "none";
-        console.log("No Title")
+        alertBox.style.visibility = "hidden"
+        displaySearch.style.visibility = "visible";
         query_url = `https://www.googleapis.com/books/v1/volumes?q=inauthor:${author_search}&key=AIzaSyDGe-7MUReZbEGjPtu1Jp_uO_vB-R5Mzak`
+        displaySearch.innerHTML = `Searching for ${author_search}...`
+        
     }else if (author_search == ""){
-        alertBox.style.display = "none";
-        console.log("No Author")
+        alertBox.style.display = "hidden";
+        displaySearch.style.visibility = "visible";
         query_url = `https://www.googleapis.com/books/v1/volumes?q=${title_search}&key=AIzaSyDGe-7MUReZbEGjPtu1Jp_uO_vB-R5Mzak`
+        displaySearch.innerHTML = `Searching for ${title_search}...`
     }else{
-        alertBox.style.display = "none";
+        alertBox.style.display = "hidden";
+        displaySearch.style.visibility = "visible";
         query_url = `https://www.googleapis.com/books/v1/volumes?q=${title_search}+inauthor:${author_search}&key=AIzaSyDGe-7MUReZbEGjPtu1Jp_uO_vB-R5Mzak`
+        displaySearch.innerHTML = `Searching for ${title_search} by ${author_search}...`
+
 
     }
-   console.log(query_url)
+
+    
    fetch(query_url)
    .then(handleErrors)
    .then(res => res.json())
