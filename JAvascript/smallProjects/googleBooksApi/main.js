@@ -63,9 +63,8 @@ function getBook(e) {
    .then(data => {
     results = data.items;
     results.map(result => {
-      console.log(result)
+      console.log(result.volumeInfo)
       book = result.volumeInfo
-      console.log(book)
       output += `
             <div class="card mx-auto mb-4" style="max-width: 540px;">
               <div class="row no-gutters">
@@ -77,7 +76,7 @@ function getBook(e) {
                     <h5 class="card-title">${book.title}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">${book.authors}</h6>
                     <p class="card-text">${book.description}</p>
-                    <a href="${book.infoLink}" class="btn btn-primary">Find book here</a>
+                    <a href="${book.infoLink}" class="btn btn-primary" target = "_blank>Find book here</a>
                     </div>
                   </div>
                 </div>
