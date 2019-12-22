@@ -6,13 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guess My Number</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Inria+Serif&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Number Guessing Game</h1>
-    Enter a guess <input type="text" id="guess">
-    <button type="submit" id = "submit">Submit</button>
-    <div id="counter">Tries left: <span id="counter_number">10</span></div>
+    <header>
+        <h1 class = "mb-3">Number Guessing Game</h1>
+        <p class = "container w-50">Can you guess a number from 1 to 100? You have 10 tries. Each guess, I will tell you if you're too high, too low or - if you're lucky - just right. </p>
+    </header>
+    <main>
+     <div id = "user-input" class = "card mx-auto " style = "width: 30rem;">    
+       <img src="https://previews.123rf.com/images/amasterpics123/amasterpics1231707/amasterpics123170700039/82823588-3d-man-lying-on-his-stomach-and-thinking-with-red-question-marks-isolated-over-white-background-with.jpg">
+        <div class="card-body">
+<!--           <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+<input type="submit" value="Submit guess" class="guessSubmit"> -->
+          Enter a guess <input type="text" id="guess">
+        <button type="submit" id = "submit" class = "btn btn-default">Submit</button>
+        <p id="previous_guesses"></p>
+        <div id="counter">Tries left: <span id="counter_number">10</span></div>
+       </div>
+     </div>
     <div id="results"></div>
+    <div id="finalAnswer"></div>
+    <div id="overlay">
+        <div id="overlayContent">
+            <p id="overlayText">Checking</p>
+    </div>
+    </main>
 </body>
-<script src = "main.js"></script>
+  <script src = "main.js"></script>
 </html>
