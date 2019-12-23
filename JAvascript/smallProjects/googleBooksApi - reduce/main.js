@@ -56,13 +56,13 @@ function getBook(e) {
         removeAlertType = "alert-primary"
     }
   let output = '';
-  console.log(query_url)
   //Fetch based on search     
    fetch(query_url)
    .then(handleErrors)
    .then(res => res.json())
    .then(data => {
     results = data.items;
+    console.log(results)
     results.map(result => {
       // console.log(result.volumeInfo)
       book = result.volumeInfo
@@ -77,7 +77,7 @@ function getBook(e) {
                     <h5 class="card-title">${book.title}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">${book.authors}</h6>
                     <p class="card-text">${book.description}</p>
-                    // <a href="${book.infoLink}" class="btn btn-primary" target = "_blank">Find book here</a>
+                    <a href="${book.infoLink}" class="btn btn-primary" target = "_blank">Find book here</a>
                     </div>
                   </div>
                 </div>

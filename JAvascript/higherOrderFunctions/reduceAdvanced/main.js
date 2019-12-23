@@ -56,38 +56,15 @@ function getBook(e) {
         removeAlertType = "alert-primary"
     }
   let output = '';
-  console.log(query_url)
   //Fetch based on search     
    fetch(query_url)
    .then(handleErrors)
    .then(res => res.json())
    .then(data => {
-    results = data.items;
-    results.map(result => {
-      // console.log(result.volumeInfo)
-      book = result.volumeInfo
-      output += `
-            <div class="card mx-auto mb-4" style="max-width: 540px;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                <img src="${book.imageLinks.thumbnail}" class="card-img">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                    <h5 class="card-title">${book.title}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">${book.authors}</h6>
-                    <p class="card-text">${book.description}</p>
-                    // <a href="${book.infoLink}" class="btn btn-primary" target = "_blank">Find book here</a>
-                    </div>
-                  </div>
-                </div>
-            </div>
-                    `;
-      
-      
-    })
-    console.log(output)
-    resultsEl.innerHTML = output;
+    results = data.items
+    .map(result => console.log(result))
+    // console.log(output)
+    // resultsEl.innerHTML = output;
    })
 
 }
@@ -103,3 +80,22 @@ function removeAlert() {
     alertBox.classList.remove(removeAlertType)
   } 
 }
+
+
+      // output += `
+      //       <div class="card mx-auto mb-4" style="max-width: 540px;">
+      //         <div class="row no-gutters">
+      //           <div class="col-md-4">
+      //           <img src="${book.imageLinks.thumbnail}" class="card-img">
+      //           </div>
+      //           <div class="col-md-8">
+      //               <div class="card-body">
+      //               <h5 class="card-title">${book.title}</h5>
+      //               <h6 class="card-subtitle mb-2 text-muted">${book.authors}</h6>
+      //               <p class="card-text">${book.description}</p>
+      //               // <a href="${book.infoLink}" class="btn btn-primary" target = "_blank">Find book here</a>
+      //               </div>
+      //             </div>
+      //           </div>
+      //       </div>
+      //               `;

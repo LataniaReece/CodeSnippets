@@ -1,0 +1,13 @@
+body{
+    background-color: #797596 !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+label { color: #040B1E; 
+     font-size: 20px; 
+     padding-bottom: 5px; }
+
+#btn_search{
+  color: #040B1E;
+  background: #E5E5E5;
+}
