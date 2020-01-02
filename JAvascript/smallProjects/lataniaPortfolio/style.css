@@ -4,9 +4,9 @@
 }
 
 body{
-    background: linear-gradient(to top, #e3e7ee, #d7deef, #cdd5f0, #c5cbf0, #c0c0ef);
-    /* background: #1D1D1D;
-    /* background-image: url("https://images.pexels.com/photos/97260/pexels-photo-97260.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); */
+    /* background: linear-gradient(to top, #e3e7ee, #d7deef, #cdd5f0, #c5cbf0, #c0c0ef); */
+    /* background: #1D1D1D; */
+    background-image: url("img/laptop.jpeg"); 
     background-size: cover;
     font-family: 'Comfortaa', cursive;
     color: silver;
@@ -43,22 +43,32 @@ body{
     box-shadow: 1px 2px 4px grey;
     background: rgba(255, 248, 248, 0.1);
     grid-template-columns: 60% 40%;
+    /* font-weight: 900; */
   }
   
-#navBar i {
+#navBar-brand {
     align-self: center;
     padding-left: 2%;
-    color: white;
+    color: white;    
+    padding: 5px 20px;
+    display: grid;
+    grid-template-rows: 50% 50%;
+    grid-row-gap: 10px;
+    border: 2px solid red;
 }
-  #navBar a {
+
+#navBar a {
     text-decoration: none;
     color: white;
+    font-size: 20px;
+    padding-left: 10px;
   }
   
-  #navbar-brand{
-    font-size: 30px;    
-    padding: 20px 20px;
-  }
+#navBar-brand i {
+  padding-left: 40px;
+}
+
+  
   #navbar-items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
