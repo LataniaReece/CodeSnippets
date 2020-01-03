@@ -1,1 +1,5 @@
-console.log(Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15))
+var arr = [];
+for (var i = 0; i < 5; i++){
+    arr.push(Math.floor(Math.random() * 7) + 1)
+}
+console.log(arr)
