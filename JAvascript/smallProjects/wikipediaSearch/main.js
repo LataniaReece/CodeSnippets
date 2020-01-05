@@ -12,12 +12,12 @@
 // Grab the search query when the user submits the form.
 
 //function to catch fetch errors: 
-function handleErrors(response) {
-    if (!response.ok) {
-      throw Error(response.statusText);
-    }
-    return response;
-  }
+// function handleErrors(response) {
+//     if (!response.ok) {
+//       throw Error(response.statusText);
+//     }
+//     return response;
+//   }
   
   let form = document.getElementById("searchForm")
   form.addEventListener("submit", handleSubmit)
@@ -36,7 +36,7 @@ function handleErrors(response) {
       let endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${searchQuery}`;
       
       fetch(endpoint)
-          .then(handleErrors)
+          // .then(handleErrors)
           .then(res => res.json())
           .then(data => {
              results = data.query.search;
