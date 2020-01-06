@@ -1,3 +1,4 @@
+//object constructor functions
 function Person(name, age, jobTitle) {
     this.name = name;
     this.age = age;

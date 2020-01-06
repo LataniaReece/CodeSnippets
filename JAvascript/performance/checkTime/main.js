@@ -1,3 +1,4 @@
+//quick performance check
 let startAt = performance.now();
 
 for (let i = 0; i < 12; i++){

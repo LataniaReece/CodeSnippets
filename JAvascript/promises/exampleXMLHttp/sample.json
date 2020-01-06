@@ -1,0 +1,684 @@
+{
+	"woodcock pilot": {
+		"pronunciation": {
+			"all": "'wʊd,kɑk_'paɪlət",
+			"simplified": "wʊdkɑkpaɪlət"
+		},
+		"rhymePatterns": {
+			"all": "-aɪlət"
+		},
+		"letters": 13,
+		"sounds": 12
+	},
+	"wood apple": {
+		"pronunciation": {
+			"all": "wʊd_'æpəl",
+			"simplified": "wʊdæpəl"
+		},
+		"rhymePatterns": {
+			"all": "-æpəl"
+		},
+		"letters": 9,
+		"sounds": 7
+	},
+	"wood broom": {
+		"pronunciation": {
+			"all": "wʊd_brum",
+			"simplified": "wʊdbrum"
+		},
+		"rhymePatterns": {
+			"all": "-ʊd_brum"
+		},
+		"letters": 9,
+		"sounds": 7
+	},
+	"wood buffalo": {
+		"pronunciation": {
+			"all": "wʊd_'bəfə,loʊ",
+			"simplified": "wʊdbəfəloʊ"
+		},
+		"rhymePatterns": {
+			"all": "-oʊ"
+		},
+		"letters": 11,
+		"sounds": 10
+	},
+	"wood distiller": {
+		"pronunciation": {
+			"all": "wʊd_dɪ'stɪlər",
+			"simplified": "wʊddɪstɪlər"
+		},
+		"rhymePatterns": {
+			"all": "-ɪlər"
+		},
+		"letters": 13,
+		"sounds": 11
+	},
+	"wood flour": {
+		"pronunciation": {
+			"all": "wʊd_flaʊr",
+			"simplified": "wʊdflaʊr"
+		},
+		"rhymePatterns": {
+			"all": "-ʊd_flaʊr"
+		},
+		"letters": 9,
+		"sounds": 8
+	},
+	"wood instrument": {
+		"pronunciation": {
+			"all": "wʊd_'ɪnstrəmənt",
+			"simplified": "wʊdɪnstrəmənt"
+		},
+		"rhymePatterns": {
+			"all": "-ɪnstrəmənt"
+		},
+		"letters": 14,
+		"sounds": 13
+	},
+	"wood keeper": {
+		"pronunciation": {
+			"all": "wʊd_'kipər",
+			"simplified": "wʊdkipər"
+		},
+		"rhymePatterns": {
+			"all": "-ipər"
+		},
+		"letters": 10,
+		"sounds": 8
+	},
+	"wood lark": {
+		"pronunciation": {
+			"all": "wʊd_lɑrk",
+			"simplified": "wʊdlɑrk"
+		},
+		"rhymePatterns": {
+			"all": "-ʊd_lɑrk"
+		},
+		"letters": 8,
+		"sounds": 7
+	},
+	"wood meal": {
+		"pronunciation": {
+			"all": "wʊd_mil",
+			"simplified": "wʊdmil"
+		},
+		"rhymePatterns": {
+			"all": "-ʊd_mil"
+		},
+		"letters": 8,
+		"sounds": 6
+	},
+	"wood model": {
+		"pronunciation": {
+			"all": "wʊd_'mɑdəl",
+			"simplified": "wʊdmɑdəl"
+		},
+		"rhymePatterns": {
+			"all": "-ɑdəl"
+		},
+		"letters": 9,
+		"sounds": 8
+	},
+	"wood rot": {
+		"pronunciation": {
+			"all": "wʊd_rɑt",
+			"simplified": "wʊdrɑt"
+		},
+		"rhymePatterns": {
+			"all": "-ʊd_rɑt"
+		},
+		"letters": 7,
+		"sounds": 6
+	},
+	"wood tapper": {
+		"pronunciation": {
+			"all": "wʊd_'tæpər",
+			"simplified": "wʊdtæpər"
+		},
+		"rhymePatterns": {
+			"all": "-æpər"
+		},
+		"letters": 10,
+		"sounds": 8
+	},
+	"wood terrapin": {
+		"pronunciation": {
+			"all": "wʊd_'tɛrəpɪn",
+			"simplified": "wʊdtɛrəpɪn"
+		},
+		"rhymePatterns": {
+			"all": "-ɛrəpɪn"
+		},
+		"letters": 12,
+		"sounds": 10
+	},
+	"wood trimmer": {
+		"pronunciation": {
+			"all": "wʊd_'trɪmər",
+			"simplified": "wʊdtrɪmər"
+		},
+		"rhymePatterns": {
+			"all": "-ɪmər"
+		},
+		"letters": 11,
+		"sounds": 9
+	},
+	"wool needle": {
+		"pronunciation": {
+			"all": "wʊl_'nidəl",
+			"simplified": "wʊlnidəl"
+		},
+		"rhymePatterns": {
+			"all": "-idəl"
+		},
+		"letters": 10,
+		"sounds": 8
+	},
+	"wool packer": {
+		"pronunciation": {
+			"all": "wʊl_'pækər",
+			"simplified": "wʊlpækər"
+		},
+		"rhymePatterns": {
+			"all": "-ækər"
+		},
+		"letters": 10,
+		"sounds": 8
+	},
+	"wool tree": {
+		"pronunciation": {
+			"all": "wʊl_tri",
+			"simplified": "wʊltri"
+		},
+		"rhymePatterns": {
+			"all": "-ʊl_tri"
+		},
+		"letters": 8,
+		"sounds": 6
+	},
+	"word hoard": {
+		"pronunciation": {
+			"all": "wɜrd_hoʊrd",
+			"simplified": "wɜrdhoʊrd"
+		},
+		"rhymePatterns": {
+			"all": "-ɜrd_hoʊrd"
+		},
+		"letters": 9,
+		"sounds": 9
+	},
+	"worker major": {
+		"pronunciation": {
+			"all": "'wɜrkər_'meɪdʒər",
+			"simplified": "wɜrkərmeɪdʒər"
+		},
+		"rhymePatterns": {
+			"all": "-eɪdʒər"
+		},
+		"letters": 11,
+		"sounds": 13
+	},
+	"working fluid": {
+		"pronunciation": {
+			"all": "'wɜrkɪŋ_'fluɪd",
+			"simplified": "wɜrkɪŋfluɪd"
+		},
+		"rhymePatterns": {
+			"all": "-uɪd"
+		},
+		"letters": 12,
+		"sounds": 11
+	},
+	"working line": {
+		"pronunciation": {
+			"all": "'wɜrkɪŋ_laɪn",
+			"simplified": "wɜrkɪŋlaɪn"
+		},
+		"rhymePatterns": {
+			"all": "-ɜrkɪŋ_laɪn"
+		},
+		"letters": 11,
+		"sounds": 10
+	},
+	"working space": {
+		"pronunciation": {
+			"all": "'wɜrkɪŋ_speɪc",
+			"simplified": "wɜrkɪŋspeɪc"
+		},
+		"rhymePatterns": {
+			"all": "-ɜrkɪŋ_speɪc"
+		},
+		"letters": 12,
+		"sounds": 11
+	},
+	"work site": {
+		"pronunciation": {
+			"all": "wɜrk_saɪt",
+			"simplified": "wɜrksaɪt"
+		},
+		"rhymePatterns": {
+			"all": "-ɜrk_saɪt"
+		},
+		"letters": 8,
+		"sounds": 8
+	},
+	"work ticket": {
+		"pronunciation": {
+			"all": "wɜrk_'tɪkɪt",
+			"simplified": "wɜrktɪkɪt"
+		},
+		"rhymePatterns": {
+			"all": "-ɪkɪt"
+		},
+		"letters": 10,
+		"sounds": 9
+	},
+	"work upon": {
+		"pronunciation": {
+			"all": "wɜrk_ə'pɑn",
+			"simplified": "wɜrkəpɑn"
+		},
+		"rhymePatterns": {
+			"all": "-ɑn"
+		},
+		"letters": 8,
+		"sounds": 8
+	},
+	"world travel": {
+		"pronunciation": {
+			"all": "wɜrld_'trævəl",
+			"simplified": "wɜrldtrævəl"
+		},
+		"rhymePatterns": {
+			"all": "-ævəl"
+		},
+		"letters": 11,
+		"sounds": 11
+	},
+	"wound gall": {
+		"pronunciation": {
+			"all": "wund_gɔl",
+			"simplified": "wundgɔl"
+		},
+		"rhymePatterns": {
+			"all": "-und_gɔl"
+		},
+		"letters": 9,
+		"sounds": 7
+	},
+	"wreath shell": {
+		"pronunciation": {
+			"all": "riθ_ʃɛl",
+			"simplified": "riθʃɛl"
+		},
+		"rhymePatterns": {
+			"all": "-iθ_ʃɛl"
+		},
+		"letters": 11,
+		"sounds": 6
+	},
+	"wrench fit": {
+		"pronunciation": {
+			"all": "rɛnʧ_fɪt",
+			"simplified": "rɛnʧfɪt"
+		},
+		"rhymePatterns": {
+			"all": "-ɛntʃ_fɪt"
+		},
+		"letters": 9,
+		"sounds": 8
+	},
+	"wrench head": {
+		"pronunciation": {
+			"all": "rɛnʧ_hɛd",
+			"simplified": "rɛnʧhɛd"
+		},
+		"rhymePatterns": {
+			"all": "-ɛntʃ_hɛd"
+		},
+		"letters": 10,
+		"sounds": 8
+	},
+	"wrestling meet": {
+		"pronunciation": {
+			"all": "'rɛslɪŋ_mit",
+			"simplified": "rɛslɪŋmit"
+		},
+		"rhymePatterns": {
+			"all": "-ɛslɪŋ_mit"
+		},
+		"letters": 13,
+		"sounds": 9
+	},
+	"writing exercise": {
+		"pronunciation": {
+			"all": "'raɪtɪŋ_'ɛksər,saɪz",
+			"simplified": "raɪtɪŋɛksərsaɪz"
+		},
+		"rhymePatterns": {
+			"all": "-aɪz"
+		},
+		"letters": 15,
+		"sounds": 15
+	},
+	"written constitution": {
+		"pronunciation": {
+			"all": "'rɪtən_,kɑnstɪ'tuʃən",
+			"simplified": "rɪtənkɑnstɪtuʃən"
+		},
+		"rhymePatterns": {
+			"all": "-uʃən"
+		},
+		"letters": 19,
+		"sounds": 16
+	},
+	"written hand": {
+		"pronunciation": {
+			"all": "'rɪtən_hænd",
+			"simplified": "rɪtənhænd"
+		},
+		"rhymePatterns": {
+			"all": "-ɪtən_hænd"
+		},
+		"letters": 11,
+		"sounds": 9
+	},
+	"wroth money": {
+		"pronunciation": {
+			"all": "rɔθ_'məni",
+			"simplified": "rɔθməni"
+		},
+		"rhymePatterns": {
+			"all": "-əni"
+		},
+		"letters": 10,
+		"sounds": 7
+	},
+	"wroth penny": {
+		"pronunciation": {
+			"all": "rɔθ_'pɛni",
+			"simplified": "rɔθpɛni"
+		},
+		"rhymePatterns": {
+			"all": "-ɛni"
+		},
+		"letters": 10,
+		"sounds": 7
+	},
+	"yacht squadron": {
+		"pronunciation": {
+			"all": "jɑt_'skwɑdrən",
+			"simplified": "jɑtskwɑdrən"
+		},
+		"rhymePatterns": {
+			"all": "-ɑdrən"
+		},
+		"letters": 13,
+		"sounds": 11
+	},
+	"yard regulator": {
+		"pronunciation": {
+			"all": "jɑrd_'rɛɡjə,leɪtər",
+			"simplified": "jɑrdrɛɡjəleɪtər"
+		},
+		"rhymePatterns": {
+			"all": "-eɪtər"
+		},
+		"letters": 13,
+		"sounds": 15
+	},
+	"yard scavenger": {
+		"pronunciation": {
+			"all": "jɑrd_'skævɪndʒər",
+			"simplified": "jɑrdskævɪndʒər"
+		},
+		"rhymePatterns": {
+			"all": "-ævɪndʒər"
+		},
+		"letters": 13,
+		"sounds": 14
+	},
+	"yard signalman": {
+		"pronunciation": {
+			"all": "jɑrd_'sɪgnəlmən",
+			"simplified": "jɑrdsɪgnəlmən"
+		},
+		"rhymePatterns": {
+			"all": "-ɪgnəlmən"
+		},
+		"letters": 13,
+		"sounds": 13
+	},
+	"yard tackle": {
+		"pronunciation": {
+			"all": "jɑrd_'tækəl",
+			"simplified": "jɑrdtækəl"
+		},
+		"rhymePatterns": {
+			"all": "-ækəl"
+		},
+		"letters": 10,
+		"sounds": 9
+	},
+	"yarn bleacher": {
+		"pronunciation": {
+			"all": "jɑrn_'bliʧər",
+			"simplified": "jɑrnbliʧər"
+		},
+		"rhymePatterns": {
+			"all": "-itʃər"
+		},
+		"letters": 12,
+		"sounds": 11
+	},
+	"yasuhiro nakasone": {
+		"pronunciation": {
+			"all": "jɑsuhiroʊ_nɑkeɪsoʊnɛ",
+			"simplified": "jɑsuhiroʊnɑkeɪsoʊnɛ"
+		},
+		"rhymePatterns": {
+			"all": "-ɑsuhiroʊ_nɑkeɪsoʊnɛ"
+		},
+		"letters": 16,
+		"sounds": 19
+	},
+	"year hour": {
+		"pronunciation": {
+			"all": "jir_aʊr",
+			"simplified": "jiraʊr"
+		},
+		"rhymePatterns": {
+			"all": "-ir_aʊr"
+		},
+		"letters": 8,
+		"sounds": 6
+	},
+	"yeast bee": {
+		"pronunciation": {
+			"all": "jist_bi",
+			"simplified": "jistbi"
+		},
+		"rhymePatterns": {
+			"all": "-ist_bi"
+		},
+		"letters": 8,
+		"sounds": 6
+	},
+	"yellow carmine": {
+		"pronunciation": {
+			"all": "'jɛloʊ_'kɑrmɪn",
+			"simplified": "jɛloʊkɑrmɪn"
+		},
+		"rhymePatterns": {
+			"all": "-ɑrmɪn"
+		},
+		"letters": 13,
+		"sounds": 11
+	},
+	"yoke devil": {
+		"pronunciation": {
+			"all": "joʊk_'dɛvəl",
+			"simplified": "joʊkdɛvəl"
+		},
+		"rhymePatterns": {
+			"all": "-ɛvəl"
+		},
+		"letters": 9,
+		"sounds": 9
+	},
+	"young creature": {
+		"pronunciation": {
+			"all": "jəŋ_'kriʧər",
+			"simplified": "jəŋkriʧər"
+		},
+		"rhymePatterns": {
+			"all": "-itʃər"
+		},
+		"letters": 13,
+		"sounds": 10
+	},
+	"young frog": {
+		"pronunciation": {
+			"all": "jəŋ_frɑɡ",
+			"simplified": "jəŋfrɑɡ"
+		},
+		"rhymePatterns": {
+			"all": "-əŋ_frɑɡ"
+		},
+		"letters": 9,
+		"sounds": 7
+	},
+	"young hopeful": {
+		"pronunciation": {
+			"all": "jəŋ_'hoʊpfəl",
+			"simplified": "jəŋhoʊpfəl"
+		},
+		"rhymePatterns": {
+			"all": "-oʊpfəl"
+		},
+		"letters": 12,
+		"sounds": 10
+	},
+	"young hyson": {
+		"pronunciation": {
+			"all": "jəŋ_'haɪsən",
+			"simplified": "jəŋhaɪsən"
+		},
+		"rhymePatterns": {
+			"all": "-aɪsən"
+		},
+		"letters": 10,
+		"sounds": 9
+	},
+	"your due": {
+		"pronunciation": {
+			"all": "jʊr_du",
+			"simplified": "jʊrdu"
+		},
+		"rhymePatterns": {
+			"all": "-ʊr_du"
+		},
+		"letters": 7,
+		"sounds": 5
+	},
+	"yuri dubynin": {
+		"pronunciation": {
+			"all": "'juri_du'bɪnjɪn",
+			"simplified": "juridubɪnjɪn"
+		},
+		"rhymePatterns": {
+			"all": "-ɪnjɪn"
+		},
+		"letters": 11,
+		"sounds": 12
+	},
+	"zakir husain": {
+		"pronunciation": {
+			"all": "'sɑkir_hu'seɪn",
+			"simplified": "sɑkirhuseɪn"
+		},
+		"rhymePatterns": {
+			"all": "-eɪn"
+		},
+		"letters": 11,
+		"sounds": 11
+	},
+	"zenith star": {
+		"pronunciation": {
+			"all": "'zinɪθ_stɑr",
+			"simplified": "zinɪθstɑr"
+		},
+		"rhymePatterns": {
+			"all": "-inɪθ_stɑr"
+		},
+		"letters": 10,
+		"sounds": 9
+	},
+	"zinc amide": {
+		"pronunciation": {
+			"all": "zɪŋk_'æmaɪd",
+			"simplified": "zɪŋkæmaɪd"
+		},
+		"rhymePatterns": {
+			"all": "-æmaɪd"
+		},
+		"letters": 9,
+		"sounds": 9
+	},
+	"zinc etching": {
+		"pronunciation": {
+			"all": "zɪŋk_'ɛʧɪŋ",
+			"simplified": "zɪŋkɛʧɪŋ"
+		},
+		"rhymePatterns": {
+			"all": "-ɛtʃɪŋ"
+		},
+		"letters": 11,
+		"sounds": 9
+	},
+	"zinc ethyl": {
+		"pronunciation": {
+			"all": "zɪŋk_'ɛθəl",
+			"simplified": "zɪŋkɛθəl"
+		},
+		"rhymePatterns": {
+			"all": "-ɛθəl"
+		},
+		"letters": 9,
+		"sounds": 8
+	},
+	"zinc orange": {
+		"pronunciation": {
+			"all": "zɪŋk_'ɔrɪndʒ",
+			"simplified": "zɪŋkɔrɪndʒ"
+		},
+		"rhymePatterns": {
+			"all": "-ɔrɪndʒ"
+		},
+		"letters": 10,
+		"sounds": 10
+	},
+	"zoning law": {
+		"pronunciation": {
+			"all": "'zoʊnɪŋ_lɔ",
+			"simplified": "zoʊnɪŋlɔ"
+		},
+		"rhymePatterns": {
+			"all": "-oʊnɪŋ_lɔ"
+		},
+		"letters": 9,
+		"sounds": 8
+	},
+	"zsa zsa gabor": {
+		"pronunciation": {
+			"all": "ʒɑ_ʒɑ_gɑ'boʊr",
+			"simplified": "ʒɑʒɑgɑboʊr"
+		},
+		"rhymePatterns": {
+			"all": "-oʊr"
+		},
+		"letters": 11,
+		"sounds": 10
+	}
+}

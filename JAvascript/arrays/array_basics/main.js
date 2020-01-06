@@ -9,7 +9,7 @@ let myObj = {
     age: 65,
 }
 
-// console.log(Array.isArray(myArray))
+console.log(Array.isArray(myArray))
 // console.log(Array.isArray(myObj))
 
 // //array to string (note that join can have any separator, to string is commas. Join is commas with default)

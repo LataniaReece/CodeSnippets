@@ -1,3 +1,4 @@
+//create an object
 class Person{
     constructor(name, age, eyeColor){
         this.name = name;

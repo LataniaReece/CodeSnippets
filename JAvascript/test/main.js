@@ -1,10 +1,6 @@
-let nameInput = document.getElementById("personName")
-let submitBtn = document.getElementById("submitBtn")
+let btn = document.getElementById("btn")
+btn.addEventListener("click", myFunction);
 
-
-submitBtn.addEventListener("click", displayName)
-
-let displayName = function(e) {
-    e.preventDefault();
-    console.log(nameInput.value)
+function myFunction() {
+ console.log("hello")
 }
