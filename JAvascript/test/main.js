@@ -1,6 +1,4 @@
-let btn = document.getElementById("btn")
-btn.addEventListener("click", myFunction);
+arr = [1,2,3,4,4,4,5]
 
-function myFunction() {
- console.log("hello")
-}
+const s = new Set(arr)
+console.log(s)
