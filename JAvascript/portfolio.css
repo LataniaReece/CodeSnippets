@@ -1,0 +1,195 @@
+/* unused font: font-family: 'Lato', sans-serif;  font-family: 'Poiret One', cursive; 
+  font-family: 'Livvic', sans-serif;*/
+
+*{
+  margin:0;
+  padding: 0;
+  box-size: border-box;
+}
+
+body {
+  background: #E8E8E8;
+  font-family: 'Ruluko', sans-serif;
+}
+
+/* #navBar {
+  padding-bottom: 2%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 55%;
+  border-bottom: 1px solid gray;
+  width: 100%;
+}
+ */
+#navBar {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  border-bottom: 1px solid gray;
+  background-color:#232b2b;
+}
+
+#navBrand{
+  font-size: 30px;
+  letter-spacing: 5px;
+  margin-left: -10%;
+}
+
+/* #navLinks {
+  list-style: none;
+  padding-top: 6%;
+  padding-right: 10%;
+  font-size: 20px;
+  display:grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  letter-spacing: 2px;
+}
+ */
+.navLinks {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 25%;
+  margin-right: -10%;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+
+.navLinks a:hover {
+  text-decoration: underline;
+}
+
+.burger{
+  display:none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+
+#mainContent {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 5%;
+  justify-content: center;
+  padding-top: 15%;
+}
+
+#mainContent img {
+  border-radius: 50%;
+  height: 170px;
+  width: 170px;
+}
+
+#mainWords {
+  padding-top: 10%;
+  padding-bottom: 10%;
+  display: grid;
+  width: 400px;
+}
+
+#mainWords h2{
+  font-size: 38px;
+  
+}
+
+#mainWords h3{
+  font-size: 22px;  
+  padding-top: 5%;
+}
+
+@media screen and (max-width: 1024px){
+  #navBrand{
+    margin-left: 0;
+  }
+  .navLinks{
+    width: 40%;
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  body{
+    overflow-x:hidden;
+  }
+  .navLinks{
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background-color: #232b2b;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5 ease-in;
+  }
+  .navLinks li {
+    opacity:0;
+  }
+  .burger{
+    display:block;
+  }
+  #mainContent{
+    margin-top: 15%;
+  }
+}
+
+.navActive{
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade{
+  from{
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/*  I want this to happen when I open the menu */
+/* #mainContent{
+    grid-auto-flow: row;
+    justify-content: flex-start;
+    padding-left: 2%;
+  }
+  #mainContent img {
+    margin-left: 20%;
+  }
+  #mainWords h2{
+    margin-left: 12%;
+  }
+
+ */
