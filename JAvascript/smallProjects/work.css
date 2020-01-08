@@ -1,0 +1,70 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("https://images.pexels.com/photos/1190830/pexels-photo-1190830.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Ruluko', sans-serif;
+}
+
+main{
+  display:grid;
+  justify-content: center;
+/*   padding-top: 20%; */
+}
+
+.mainText{
+  align-self: center;
+  color: white;
+  text-align: center;
+}
+
+.mainText h1 {
+  letter-spacing: 0.1em;
+  font-size: 5em;
+  text-transform: uppercase;
+  
+}
+
+.mainText h3 {
+  letter-spacing: 0.1em;
+  font-size: 2em;
+}
+
+.timeContainer {
+  background: white;
+  padding: 5%;
+}
+
+.btn{
+  color: white;
+  font-size: 1em;
+  width: 25%;
+  justify-self: center;
+  background-color: transparent;
+  padding: 2%;
+  border-radius: 25px;
+}
+#timer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.resultTime {
+  border: black 2px solid;
+  color: red;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 2em;
+  text-align: center;
+  
+}
+
+.resultTime .label{
+  color: blue;
+/*   font-size: 2em; */
+}
