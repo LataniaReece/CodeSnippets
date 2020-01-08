@@ -47,6 +47,7 @@ main{
   background-color: transparent;
   padding: 2%;
   border-radius: 25px;
+  font-weight: bold;
 }
 #timer {
   display: flex;
@@ -54,17 +55,22 @@ main{
 }
 
 .resultTime {
-  border: black 2px solid;
-  color: red;
   display:flex;
   flex-direction: column;
   justify-content: space-between;
-  font-size: 2em;
   text-align: center;
   
 }
 
-.resultTime .label{
-  color: blue;
-/*   font-size: 2em; */
+.number{
+  font-size: 2em;
+  color: black;
+  font-weight: bold;
+}
+
+.label{
+  color:black;
+  opacity: 50%;
+  font-size: 1.2em;
+  
 }
