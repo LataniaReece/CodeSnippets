@@ -13,20 +13,25 @@ var timer = setInterval(function() {
         let secs = Math.floor((t % (1000 * 60)) / 1000);
         
       
-        console.log(days, hours, mins, secs)
+        // console.log(("0"+hours).slice(-2), hours)
       
     
-        document.getElementById("timer-days").innerHTML = days +
-        "<span class='label'>DAY(S)</span>";
+        document.getElementById("timer-days").innerHTML = `<span class = "number">${days}</span> <span class='label'>Day(s)</span>`;
+      
+      document.getElementById("timer-hours").innerHTML = `<span class = "number">${hours}</span> <span class='label'>Hour(s)</span>`;
+      
+      document.getElementById("timer-mins").innerHTML = `<span class = "number">${mins}</span> <span class='label'>Min(s)</span>`;
+      
+      document.getElementById("timer-secs").innerHTML = `<span class = "number">${secs}</span> <span class='label'>Sec(s)</span>`;
+      
+//         document.getElementById("timer-hours").innerHTML = ("0"+hours).slice(-2) +
+//         "<span class='label'>HR(S)</span>";
     
-        document.getElementById("timer-hours").innerHTML = ("0"+hours).slice(-2) +
-        "<span class='label'>HR(S)</span>";
+//         document.getElementById("timer-mins").innerHTML = ("0"+mins).slice(-2) +
+//         "<span class='label'>MIN(S)</span>";
     
-        document.getElementById("timer-mins").innerHTML = ("0"+mins).slice(-2) +
-        "<span class='label'>MIN(S)</span>";
-    
-        document.getElementById("timer-secs").innerHTML = ("0"+secs).slice(-2) +
-        "<span class='label'>SEC(S)</span>";
+//         document.getElementById("timer-secs").innerHTML = ("0"+secs).slice(-2) +
+//         "<span class='label'>SEC(S)</span>";
     
     } else {
 
