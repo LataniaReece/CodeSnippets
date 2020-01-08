@@ -1,0 +1,76 @@
+/* unused font: font-family: 'Lato', sans-serif;  font-family: 'Poiret One', cursive; 
+  font-family: 'Livvic', sans-serif;*/
+
+*{
+  margin:0;
+  padding: 0;
+  box-size: border-box;
+}
+
+body {
+  background-image: url("https://images.pexels.com/photos/1323712/pexels-photo-1323712.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"); 
+  background-size: cover;
+  background-attachment: fixed ;
+  /* background attachment fixed seemed to help a little bit */
+  background-repeat: no-repeat;
+  font-family: 'Ruluko', sans-serif;
+}
+
+#navBar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 8vh;
+  /* border-bottom: 1px solid gray; */
+  /* background-color:#232b2b; */
+}
+
+.burger {
+  /* margin-left: -40%; */
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.share {
+  /* margin-right: -30%; */
+  display: flex;
+  /* grid-auto-flow: column; */
+  justify-content: space-between;
+  border: 2px solid black;
+  width: 8%;
+}
+
+.share-icon {
+  color: white;
+}
+
+.navLinks{
+  list-style: none;
+  position: absolute;
+  left: 0px;
+  height: 75vh;
+  top: 8vh;
+  background-color: #DCDBE0;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 25%;
+  transform: translateX(-100%);
+  /* transition: transform 0.5 ease-in; */
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-size: 20px;
+}
+

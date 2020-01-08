@@ -1,0 +1,15 @@
+/* unused font: font-family: 'Lato', sans-serif;  font-family: 'Poiret One', cursive; 
+  font-family: 'Livvic', sans-serif;*/
+
+*{
+  margin:0;
+  padding: 0;
+  box-size: border-box;
+}
+
+body {
+  background: url("https://images.pexels.com/photos/160107/pexels-photo-160107.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Ruluko', sans-serif;
+}
