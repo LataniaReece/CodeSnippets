@@ -13,7 +13,7 @@ body {
 main{
   display:grid;
   justify-content: center;
-/*   padding-top: 20%; */
+  padding-top: 10%;
 }
 
 .mainText{
@@ -24,41 +24,52 @@ main{
 
 .mainText h1 {
   letter-spacing: 0.1em;
-  font-size: 5em;
-  text-transform: uppercase;
+  opacity: 80%;
+  font-size: 4em;
+  margin-bottom: 0.1em;
   
 }
 
-.mainText h3 {
+.mainText p {
   letter-spacing: 0.1em;
-  font-size: 2em;
+  font-size: 1.3em;
 }
 
 .timeContainer {
-  background: white;
   padding: 5%;
 }
 
+#timer-secs {
+  border-right: 0 !important;
+}
+
 .btn{
-  color: white;
+  color: black;
+  opacity: 55%;
   font-size: 1em;
-  width: 25%;
+  width: 40%;
   justify-self: center;
-  background-color: transparent;
+  background-color: white;;
   padding: 2%;
   border-radius: 25px;
   font-weight: bold;
+  outline: none;
 }
 #timer {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  width: 70%;
+  text-align: center;
+  margin-left: 18%;
 }
 
 .resultTime {
   display:flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
+  border-right: solid 1px gray;
+  padding-right: 2%;
   
 }
 

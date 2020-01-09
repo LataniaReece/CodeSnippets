@@ -16,12 +16,23 @@ body {
   font-family: 'Ruluko', sans-serif;
 }
 
+main {
+  height: 100vh;
+  display:grid;
+  grid-row-gap: 20%;
+  /* border: 2px solid black; */
+}
+
+#mainContent{
+  justify-self: center;
+}
+
 #navBar {
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 8vh;
+  /* min-height: 8vh; */
   /* border-bottom: 1px solid gray; */
   /* background-color:#232b2b; */
 }
