@@ -1,15 +1,408 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+<title>Poker Table (9 Player) Rewrite</title>
+<meta charset="utf-8">  
+<meta name="viewport" content="width=device-width">  
+<meta name="Poker Table Nine Max" content="Poker Table Nine Max">
+<meta name="keywords" content="Reece, Poker, Camp, Nine, Max">  
+<!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
+  
+  <section id="poker-table-v2">
+   <!--Completed Challenge--> 
+    <aside id="challenge-completed">
+      <button class="exit-button">X</button>
+      <h3>Challenge Completed!</h3>
+      <h4>Your Bonus is Waiting</h4>
+    </aside>
+   <!--Poker Table--> 
+    <section id="poker-table">
+      <section class="table">
+        <section id="table-pots">
+          <h2>Total Pot: $20</h2>
+          <h3>Main Pot: $15</h3>
+          <h4>Side Pot: $10</h4>
+        </section>
+        
+   <!--Board Cards-->     
+      <ul id="board-cards-container" label="repeat-region">
+        <li id="board-card-1" class="card">
+          <p id="board-card-1-value">1</p>
+          <span id="board-card-1-suit_1">&diams;</span> 
+          <span id="board-card-1-suit_2">&diams;</span>
+        </li>
+        <li id="board-card-2" class="card">
+          <p id="board-card-2-value">2</p>
+          <span id="board-card-2-suit_1">&#9829;</span> 
+          <span id="board-card-2-suit_2">&#9829;</span>
+        </li>
+        <li id="board-card-3" class="card">
+          <p id="board-card-3-value">3</p>
+          <span id="board-card-3-suit_1">&#9827;</span> 
+          <span id="board-card-3-suit_2">&#9827;</span>
+        </li>
+        <li id="board-card-4" class="card">
+          <p id="board-card-4-value">4</p>
+          <span id="board-card-4-suit_1">&#9824;</span> 
+          <span id="board-card-4-suit_2">&#9824;</span>
+        </li>
+        <li id="board-card-5" class="card">
+         <p id="board-card-5-value">5</p>
+         <span id="board-card-5-suit_1">&diams;</span> 
+         <span id="board-card-5-suit_2">&diams;</span>
+        </li>
+      </ul> 
+   <!--Poker Players-->      
+        <ol id="poker-players">
+          
+       <!--FOX-->       
+          <li id="player-1-container" label="repeat-region">
+           <!--Fox Dollar Amount -->
+            <ul id="player-1-dollar-amount">
+              <h3>Fox</h3>
+              <p>$3.46</p>
+            </ul>  
+           <!--Fox Chip Container--> 
+            <ul id="player-1-chip-container" class="player-chip-container">
+               <li class="villian-dealer-button">
+                 <div class="chips"><p>D</p></div>
+               </li>
+               <li class="villian-big-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li>
+               <li class="villian-small-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li> 
+            </ul>
+          </li>  
+          
+       <!--MONKEY-->  
+          <li id="player-2-container" label="repeat-region">
+           <!--Monkey Dollar Amount--> 
+            <ul id="player-2-dollar-amount">
+              <h3>Monkey</h3>
+              <p>$11.18</p>
+            </ul>  
+           <!--Monkey-Chip-Container--> 
+            <ul id="player-2-chip-container" class="player-chip-container">
+               <li class="villian-dealer-button">
+                 <div class="chips"><p>D</p></div>
+               </li>
+               <li class="villian-big-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li>
+               <li class="villian-small-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li> 
+            </ul>
+           <!--Monkey Cards Container--> 
+            <ul id="player-2-cards-container" class="player-cards-container">
+              <li id="player-2-card-1" class="card">
+                <p id="player-2-card-1-value">1</p>
+                <span id="player-2-card-1-suit_1">&diams;</span> 
+                <span id="player-2-card-1-suit_2">&diams;</span>
+              </li>
+              <li id="player-2-card-2" class="card">
+                <p id="player-2-card-2-value">2</p>
+                <span id="player-2-card-2-suit_1">&#9829;</span> 
+                <span id="player-2-card-2-suit_2">&#9829;</span>
+              </li>
+            </ul>              
+          </li>
+          
+       <!--ROBERT-->        
+          <li id="player-3-container" label="repeat-region">
+           <!--Robert Dollar Amount-->
+            <ul id="player-3-dollar-amount">
+              <h3>RowdyRobert</h3>
+              <p>$10.00</p>
+            </ul> 
+           <!--Robert Chip Container--> 
+            <ul id="player-3-chip-container" class="player-chip-container">
+               <li class="villian-big-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li>
+               <li class="villian-small-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li> 
+               <li class="villian-dealer-button">
+                 <div class="chips"><p>D</p></div>
+               </li>
+            </ul>
+           <!--Robert Cards Container--> 
+            <ul id="player-3-cards-container" class="player-cards-container">
+              <li id="player-3-card-1" class="card">
+              </li>
+              <li id="player-3-card-2" class="card">
+              </li>
+            </ul>      
+          </li>
 
+       <!--ELLIE BELLIE-->        
+        <li id="player-4-container" label="repeat-region">
+           <!--Ellie Bellie Dollar Amount--> 
+            <ul id="player-4-dollar-amount">
+              <h3>Ellie-Bellie</h3>
+              <p>$6.00</p>
+            </ul>  
+           <!--Ellie Bellie Chip Container-->
+            <ul id="player-4-chip-container" class="player-chip-container">
+               <li class="villian-big-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li>
+               <li class="villian-small-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li> 
+              <li class="villian-dealer-button">
+                 <div class="chips"><p>D</p></div>
+               </li>
+            </ul>
+    
+            <!--Ellie Bellie Cards Container-->
+             <ul id="player-4-cards-container" class="player-cards-container">
+              <li id="player-4-card-1" class="card">
+                <p id="board-card-2-value">1</p>
+                <span id="board-card-2-suit_1">&#9829;</span> 
+                <span id="board-card-2-suit_2">&#9829;</span>
+              </li>
+              <li id="player-4-card-2" class="card">
+                <p id="board-card-2-value">2</p>
+                <span id="board-card-2-suit_1">&#9829;</span> 
+                <span id="board-card-2-suit_2">&#9829;</span>
+              </li>
+              <li id="player-4-card-3" class="card">
+                <p id="board-card-3-value">3</p>
+                <span id="board-card-3-suit_1">&#9827;</span> 
+                <span id="board-card-3-suit_2">&#9827;</span>
+              </li>
+              <li id="player-4-card-4" class="card">
+                <p id="board-card-5-value">4</p>
+                <span id="board-card-5-suit_1">&diams;</span> 
+                <span id="board-card-5-suit_2">&diams;</span>
+              </li>
+            </ul>  
+          </li>
+     
+       <!--BIRDIE-->        
+          <li id="player-5-container" label="repeat-region">
+             <!--Fly Birdie Dollar Amount-->   
+            <ul id="player-5-dollar-amount">
+              <h3>fly_birdie</h3>
+              <p>$15.00</p>
+            </ul>  
+             <!--Fly Birdie Chip Container-->   
+            <ul id="player-5-chip-container" class="player-chip-container">
+               <li class="villian-dealer-button">
+                 <div class="chips"><p>D</p></div>
+               </li>
+               <li class="villian-big-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li>
+               <li class="villian-small-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li> 
+            </ul>
+          </li>     
+          
+       <!--MY CARDS--> 
+           <li id="player-6-container" label="repeat-region">
+           <!--My Chip Container-->  
+            <ul id="player-6-chip-container" class="player-chip-container">
+               <li class="villian-dealer-button">
+                 <div class="chips"><p>D</p></div>
+               </li>
+               <li class="villian-big-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li>
+               <li class="villian-small-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li> 
+            </ul>
+            <!--My Cards Container-->
+            <ul id="player-6-cards-container" class="player-cards-container">
+              <li id="player-6-card-1" class="card">
+                <p id="player-6-card-1-value">1</p>
+                <span id="player-6-card-1-suit_1">&diams;</span> 
+                <span id="player-6-card-1-suit_2">&diams;</span>
+              </li>
+              <li id="player-6-card-2" label="repeat-region" class="card">
+                <p id="player-6-card-2-value">2</p>
+                <span id="player-6-card-2-suit_1">&#9829;</span>  
+                <span id="player-6-card-2-suit_2">&#9829;</span>
+              </li>
+            </ul>    
+          </li>
+          
+        
+       <!--MARIE LOU-->     
+       <li id="player-7-container" label="repeat-region">
+         <!--Marie Lou Dollar Amount-->
+            <ul id="#player-7-dollar-amount">
+              <h3>Marie-Lou</h3>
+              <p>$1.24</p>
+            </ul>  
+         <!--Marie Lou Chip Container-->
+            <ul id="player-7-chip-container" class="player-chip-container">
+               <li class="villian-dealer-button">
+                 <div class="chips"><p>D</p></div>
+               </li>
+               <li class="villian-big-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li>
+               <li class="villian-small-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li> 
+            </ul>
+         <!--Marie Lou Cards Container-->
+            <ul id="player-7-cards-container" class="player-cards-container">
+              <li id="player-7-card-1" class="card">
+              </li>
+              <li id="player-7-card-2" class="card">
+              <li id="player-7-card-1" class="card">
+              </li>
+              <li id="player-7-card-2" class="card">  
+              </li>
+            </ul>      
+          </li>   
+          
+       <!--ALBERT-->       
+          <li id="player-8-container" label="repeat-region">
+            <!--Albert Dollar Amount-->
+            <ul id="player-8-dollar-amount">
+              <h3>Albert459</h3>
+              <p>$5.00</p>
+            </ul>  
+            <!--Albert Chip Container-->
+            <ul id="player-8-chip-container" class="player-chip-container">
+               <li class="villian-dealer-button">
+                 <div class="chips"><p>D</p></div>
+               </li>
+               <li class="villian-big-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li>
+               <li class="villian-small-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li> 
+            </ul>
+          </li>       
+          
+          
+       <!--VINCENT-->       
+          <li id="player-9-container" label="repeat-region">
+            <!--Vincent Dollar Amount-->
+            <ul id="player-9-dollar-amount">
+              <h3>Vincent202</h3>
+              <p>$2.88</p>
+            </ul>
+            <!--Vincent Chip Container-->
+            <ul id="player-9-chip-container" class="player-chip-container">
+               <li class="villian-dealer-button">
+                 <div class="chips"><p>D</p></div>
+               </li>
+               <li class="villian-big-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li>
+               <li class="villian-small-blind">
+                 <div class="chips"></div>
+                 <div class="chips"></div>
+               </li> 
+            </ul>
+          </li>              
+        </ol> 
+        
+     </section>  
+   <!--Poker Hand Information-->   
+     <aside id="poker-hand-info">
+       <p>H3: three pair, sevens</p>
+       <p>H2: Two pair, sixes</p>
+       <p>H1: One pair, fives</p> 
+     </aside>  
+      
+    </section>
+    
+ <!---MESSAGE BOARD--->
+    <section id="message-board">
+      <header id="what-will-you-do-next">
+          <ul id="reparion">
+            <li>Reparion</li>
+            <li>$10.28</li>
+            <li>Reparion</li>
+            <li>$10.28</li>
+         </ul>
+         <p>What will you do next?</p>
+         <ul id="what-will-you-do-next-options">
+           <li><button><span>&#10007;</span> FOLD</button></li>
+           <li><button><span>&#10003;</span> CALL</button></li>
+           <li><button><span>&#8648</span> RAISE</button></li> 
+          </ul>
+      </header>
 
+      <div id="min-max-slider">
+        <button>&#8722;</button>
+        <input type="range" min="1" max="100" value="50" id="slider">
+        <button>&#43;</button>
+        <input type="text" placeholder="0">
+      </div>
+      
+      <section id="how-much-will-you-raise">
+        <button>1/2</button>
+        <button>2/3</button>
+        <button>5</button>
+        <button>All-In</button>
+      </section>
+    </section>
+    
+    <section id="text-area">
+      <p>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet porttitor eget dolor morbi non arcu risus quis. Diam phasellus vestibulum lorem sed. Iaculis eu non diam phasellus vestibulum lorem sed risus. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac. Egestas pretium aenean pharetra magna ac placerat vestibulum lectus mauris. Lorem dolor sed viverra ipsum nunc. Ultricies mi quis hendrerit dolor magna eget. Malesuada pellentesque elit eget gravida. Cursus metus aliquam eleifend mi. Dui nunc mattis enim ut tellus elementum. Elementum pulvinar etiam non quam lacus suspendisse faucibus.</p>
+    </section>
+    
+    <aside id="player-personal-settings">
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAAbCAYAAACN1PRVAAAABmJLR0QA/wD/AP+gvaeTAAAEt0lEQVRIiZ2VX4hdVxnFf2ufc+bO5E6SyUzjFB/aSNX0pkHqVIwKThLFqgRpG8lciFaKfVAUJco0DfUlUim0GRhFEAoKvqgzJaLF+iBiSsYKaaOxBuOkaaVJi5iZdG6Szp87d845e/mQVJsS6xy/h/2y99rrW2vtP+L/rK3jE40YGY5R75e0EXsA0Wu4DLSCfN5wHGdHp0c/ew5AVUm2jE182ugR4PbVYgxHHOKDlchuH/9FX6dceQ1IqjYJ/DNUWf38N+65ZLgXeLki0fPB+nxaBbH50Z+9M8jreubrW5d720NRbMcMITbi2C/oMWEBaEGcAT1rNOWydkbJ8tcq2dh47PB7COUZYE7yb4CpGP2CSc51Ffmlrs66zvK6dncswgAhbpLdsNgJfAKoV1IWYuzEK8YP2NoL7JWEMEWWUmRLEIFQAuBrpXQqZXbqwMgrkr8MzFTBgV8M0kglZbc99sSNMcbLGZ1bcrp3IA8DQ4aNgn6gF/w60hyR8w48Z5jqna8/u1hvf7GSsjwUBVIzV+0YxF3Yf5bi/iToY9ML05umR5v9gwuD784zfSok+jboXIjct1RfOiv5+/92dev4RCOW2m74EGYjol+4z+h1m1YIbjlyHDMV6uFMbHM/+GFg7Zv94r8/FCu69dATH5YYA39k1RLNdAg6gDgfo/8A/K84/mFrfyr5J8C7Vk0EIBrRPpzFzoao2mHwHaB3AOuBi8AcaBb5OczRzJ3f5urenQbcjNYhxPYKbCdFPHDygS8sNsZ//s24ki688OBd82/M3vH449n8/MAtwcWWID6e0/Vd8M1qHJr4Tl4L36sVrLc9jL3NCoNAP/Za0JLwXITXsE6QcNR57WwIy19JsvLHZZ4+hfwBYAVYBLqBnut0WKgxNrkEpIJnLJ4O1nQRyrNWV6u70MJy6t4s5msd2WRpMzCM2IlZA+kmXB6+SvZ21ZL8UAosAQOGnZidERNiAApyQVJCRNeeMV8ZM6udi1cMNwluAAJQGFrCFxDHgKlOHp7sTrwjKMZ7DMdXnxeAX7TYc/KB3bOxrN13erQ5OD3aTDqF+qZHm9np0eZgLH1niOGnRN5bS/2MpV9qy9jkQ11J1w/aRfumRGG7rQ8iBkE3iLg+ovkALeNZ0Albv68v9vyl3bt4f+quyZzi18hDmDnJ80Z1oBeov6XD+EZmAEcsHUnE34qcl2shveiinXcyJVlI++zyZhNuxQwDdwJ9FTJblDiYAsvABmCX7F3REBLIySFLSYAYfTWOaytJO8tlmbYwHaD2pqmO4QJwLOCp1F2TJ0d3z6agJsRx0G0VQnsV9K2/7ts7A3wSYPOjT64tKdbXestLp746snA9kBqHJvaFNeGH5XL5PpwMS1ffRjxg2CB8GUILe07yH5Gn0pgfK0KtuZLpVy99feTCajsMSI/Etl+Vk31B8aLFeBkY6RTadnq0ORh6wlCI3E3ww5iz0eFzuWp/t/lRtpKsqeAGKVdufh94j609skmAJIXG2CSx7StxWfgt1y3EslOFLNjcC7xUBQTMGH3p1P6R81VAAthx8Ol0pj67Q/JHQdsi3Pifn5c2MGe4gDkBTNUX1/zuTwc/s/R2G1+v/gX8YTH4bNrenwAAAABJRU5ErkJggg=="></button>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAACsklEQVRIiaWUS0iUURTHf+ebKQiVdEYLege1CYqgiESIEiMdSXMwCSpaGLVv5bKWtYzApOgBEbXoswma0TJqMgpr1YOICDKhLPEbI5PKce5p4czXqDnfjP5X997z+N1zH0coQFE7eA2o9hmq9zQ77wqJlXwdY3bwiMKV9PSOGKtDfeYUylgo7Oz0ivfnMkbt4HugHBCF0ixTg1qmAQWU2/ls1PKwfwbKmAqZIlE9P2+QirZ7xH/te5O4P2/Q0qFEJzA4q4NI/ORJzLxBW4+TROTirA5GP+UD8QQBpJLaAfTPtMgwItF8QZ7P++FD/PE4Zvum0o2q/tVYpgKkfzS56GkFf3y//Gbbzwkn3tJCak6gSKS8ZEFK20COofoMkZuWJQOaMr/VYrka2SyircAK4IvA6dEJ53xLC+N5g6J2sBq4mk5SiN6qZQ7U7xt5Pd0w445inYFWoHsOEIANYqy+rlvl9dMNUyqK2YH9itz43wYK1LgYbahrTnRnFtyEXZGKdapy2QPySYQaX5G/2FJ2IwzM4rdQLbke6yxdk1lwe13KmHYRinJtU4TWuibnQXrac9cOHBXk3izuATW+s0CDW1HMDlSKUpMLAjCadHrBbbaMTSTiOQOEvTE7UOmCjMghLwhA1tNdH7WDWuwP/vGOkoMuSJRdXu6hsCPZ4+x5LilUuyBgpVdA1A5q9jh77kFa9Q+k3q1I0V6ASGTJ0rwAGclka/KnOUOCrs3lXx9O7ABobBz6Rtb/y6OyQUhXZFn6pKBdFiCBHnD/kVwCPUSOJpv3nUxVUkhdgHRFdU3Dj4Azc0iUSwbhRG34+0sXBBAKO20iHEb5MF+CwnNFa0NNzrnM2oyjUkW6OsuqFKsKZIuoLldhGbCYyaMuSbv+AFIojooOCvIR4YWkzOO65pFX0/P+BdK/+HUfxVq4AAAAAElFTkSuQmCC"></button>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAABmJLR0QA/wD/AP+gvaeTAAAC+ElEQVRIibWUTWhUVxiGn/fMjboRxU3ToouSGd2IxpipiYJ0E0zFhbjThVCKMTEEQSxkcCNCSYqg4E9+FOlGKpQuuptAFN2oaWfUCC6kN6ELKZ2N4s/Gn7n3c5GZON65NxklfVfnnO877/v9nSOAbZf9tUHAWWAXsJKlwSvQZAoN/tnb4qsi8hBYs0QCUTxrsnCTq2Tyf4kArHkrd8YxV65GUSr2ZlTszQgoNXpJsMvxKT0xHtTsphuPj1UuwfDOZEeB25HIHs6vrU7okYxhwOIIY4VMdvze4fXniqX0TkwDwKzBKedxserjEV4wGDTwhX40vWgr9GVyghNxnGof8+siEEwVSukdnFSYkHE8zJQdn8lbTN+9WH/oaP9i9kgRLtSefzPmdwbQKcNC4+79I5mpWnv20uyhOJFEIQBkA1SEWn/5Z7X3pnwthG4BCJygfdTPl1d4B6a///o5QGjklECXNAxgdmU+mjfla0B3fTB8570u//pha38k0UWFSsCEjOGgHF6FuXLFitSItY34HQAKdKYyeRNE3tlHpSv2Zr6M8gTSdlnsxH7QcmwHpgr96SdArnpeO2jJpVtifJRR+5j/HzAtY5pQI4X+9BML7LYWCcdC7gBsOf/4K89LDZhoBVprfaIUzUC3iUFL2TGAyghPJKuQr465W5Y6aGKQuZ42LyRUc197q+vycm8/Rj5OpLzCO1DdCn5I4kt8R04MVdeVd7K7bcTvcKITIO7ByjRu2Ok4vtgvCOxG8XCmC2nhcYvg25M3vVfNa4uCzVFbbEZCN5Bs63ixydnqoyHWA1xZZuHVu30b/gXIXpxZZyk7ZmivE0OFnpbLt6RydtTPm+qFEjLCZPxsYg+wcd7ZGC70ZXIA2VF/qNL4KiYFNw1+Aup+oqQeKUJSUa8ZWbElYu4y6ErgwwEvk4wxmBeymD4sgBce6DrYvgYvNCeUejFMOueUA55+xuVG8SwMlHN/9bT83WThZoPf+LQyLoaXwO9hoG33+9Mz7wFGmRnoOVbmHwAAAABJRU5ErkJggg=="></button>
+    <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAADnklEQVRIiaWWQUwcZRTHf++bgYApNd3dinaLQbnUi1rTmHgyTdTSXWDLEvbixWqNJrViosaTZiHxUtOkaUyMVtOTHraygMsuVpv0pCaNF+uhJNpWLZQCuxhpi7A7M88Du7gZdoiN7zTzn3m///dm3rxvhC3i3Hiow1VJiErcQztF6QBQ4bog1xTNi+pEbGBpJoghjcRcJhy1bUkrehiwqrILzFeP2+t0B/SMbZn0c4niDT/L+IWp0UifZXNZ0SPATRFNq5i9Fy+VmmPJUjSWLEUvXio145knVGUYWAB52XF1ujAe6d2ygsJo+BjCScBDdcRtbjnR23tjBeCbicgux/EebJbKL88kb5U2qs3tuseqrL4F8i5gEIZi/aUPNxlMjUb6VHQMWDbKYPdA6TyAKlIYC58UeK1a8Roix8H9Idb/51QtP58NPSvIWaANI4dih4q5DYNcJhy1bC4DrUY5WIMDTI2FXlKVT/2lV5OHDiZLp3wmBWDFqOzpHijOGQBjyTDQhupIPRxAkaON4OvXeLX+PJ5c+lZV3ge2e3hpAHNuPNQhoi8As25zy4n6hAsXsFEeDTIAOv2Cvc36AJhD5MVcJhw1rkoCsET0dO2Fbl5oYLT8+DFN9cKBA/N3QE4Dtm2RMKjEADysCX/2/v04CD9vYbC07xUqftEoEwCeaMyAdgHOncpiY5BKxxYG4Uxmd6tfXHaLPwEuSJcBHgAWUincxgz9PhAv/DE4OLPql6useYFo7UsOfM7GMm8Cyw2tVY6KBOYqrH84c8B9qo3nUndi8VdVsg2W/108WZxslJNOY4B2hVkDcgVomhrd+XhQFbal7wHles0ThoLu3/dYZC9gg14xiuYBMO6mQbUBc3QH/05PgFW1134Put/C6wEQkbwURkO7EbkGFG87rQ+nUjN/A0xO3rvDKjcdUbQfeNJnAHALOC8iZ3cuFL+stev68Fu7CoRdh06zvlnoGeD+bfbK2wD5bOiwKdu/KXoceKoBHKAN6FfVLxZ2hqYL2cjTAFal/A7QruhnvanSrEB1FLs6DbQifIRyLKj8LaKMMowwAtxWx+yJpxZvbnROPhvqFmQyYLV3E54iiVqHbexo8eTS1whvAN7/g/N6fftu6v18NtIj6OfA9ruE/2VUnu8eKObrxU17cjxZnHSbyl0KpwDnP4AdVD8xKo/44RDwV1GLXCYctZroA+1B5SGgNviuK3pVRPJuha96U6XZIMY/b4Fvs2hcD0oAAAAASUVORK5CYII="></button>
+    </aside>
+    
+  </section>
 </body>
-<script src = "main.js"></script>
-</html>
+<!-- <script src = "deck.js"></script> -->
+<script src = "main2.js"></script>
+</html>  
