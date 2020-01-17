@@ -16,7 +16,7 @@ players = [
         age: 20,
         cards: {
             card1: {
-                suit: "diam",
+                suit: "",
                 value: 2
             }
         }
@@ -45,10 +45,12 @@ players = [
 ]
 
 let playerContainer = "";
-let queryDisplay = function(query){
+let displayCards = function(query){
   if(query != null){
     return `<p>${query}</p>`
-  }else {
+  }else if(query == ""){
+    return `<p></p>`       
+  } else {
     return ""
   }
 }
@@ -58,8 +60,8 @@ players.map(player => {
     <li>
         <p>${player.name}</p>
         <p>${player.age}</p>
-        ${queryDisplay(player.cards.card1.suit)}
-        ${queryDisplay(player.cards.card1.value)}
+        ${displayCards(player.cards.card1.suit)}
+        ${displayCards(player.cards.card1.value)}
     </li>
 `})
 
