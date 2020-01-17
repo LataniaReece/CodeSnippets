@@ -26,7 +26,7 @@ players = [
         age: 21,
         cards: {
             card1: {
-                suit: "diam",
+                suit: "hearts",
                 value: 2
             }
         }
@@ -45,25 +45,25 @@ players = [
 ]
 
 let playerContainer = "";
+let queryDisplay = function(query){
+  if(query != null){
+    return `<p>${query}</p>`
+  }else {
+    return ""
+  }
+}
 
 players.map(player => {
     playerContainer +=`
     <li>
         <p>${player.name}</p>
         <p>${player.age}</p>
-        <p>${player.cards.card1.suit}</p>
-        <p>${displayEl(player.cards.card1.value)}</p>
+        ${queryDisplay(player.cards.card1.suit)}
+        ${queryDisplay(player.cards.card1.value)}
     </li>
-
 `})
 
 demoEl.innerHTML = playerContainer
 
 //It shows null in the output, figure out if there is a way to just remove that part of the element?
 
-//Maybe there's some way to make it have a display:none if the value is null?
-function displayEl(query){
-    if(query == null){
-        this.style.display = "none";
-    }
-}
