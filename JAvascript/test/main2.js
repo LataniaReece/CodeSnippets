@@ -127,31 +127,6 @@ let players = [
     
     },
     {
-        playerNum: 6,
-        name: "User", 
-        amountLeft: 6.00,
-        cards:{
-            card1:{
-                suit: "&#9829;",
-                value: 1
-            },
-            card2:{
-                suit: "&#9829;",
-                value: 2
-            },
-            card3:{
-                suit: "&#9827;",
-                value: 3
-            },
-            card4:{
-                suit: "&diams;",
-                value: 4
-            },
-        },
-        dealer: "D"
-    
-    },
-    {
         playerNum: 7,
         name: "Marie-Lou", 
         amountLeft: 1.24,
@@ -240,20 +215,21 @@ players.map(player => {
                 </ul>
                 <!--${player.name} Chip Container-->
                 <ul id="player-${player.playerNum}-chip-container" class="player-chip-container">
-                  <li class="villian-dealer-button">
-                    <div class="chips">
-                      <p>${player.dealer}</p>
-                    </div>
-                  </li>
-                  <li class="villian-big-blind">
-                    <div class="chips"></div>
-                    <div class="chips"></div>
-                    <div class="chips"></div>
-                    <div class="chips"></div>li>
-                  <li class="villian-small-blind">
-                    <div class="chips"></div>
-                    <div class="chips"></div>
-                  </li>
+                    <li class="villian-big-blind">
+                        <div class="chips"></div>
+                        <div class="chips"></div>
+                        <div class="chips"></div>
+                        <div class="chips"></div>
+                    </li>     
+                    <li class="villian-small-blind">
+                        <div class="chips"></div>
+                        <div class="chips"></div>
+                    </li>
+                <li class="villian-dealer-button">
+                  <div class="chips">
+                    <p>${player.dealer}</p>
+                  </div>
+                </li>
                 </ul>
                 <!--${player.name} Cards Container-->
                 <ul id="player-${player.playerNum}-cards-container" class="player-cards-container">
@@ -267,14 +243,25 @@ players.map(player => {
                   <span id="board-card-2-suit_1">${player.cards.card2.suit}</span> 
                   <span id="board-card-2-suit_2">${player.cards.card2.suit}</span>
                 </li>
+                <li id="player-${player.playerNum}-card-3" class="card">
+                    <p id="board-card-3-value">${player.cards.card3.value}</p>
+                    <span id="board-card-3-suit_1">${player.cards.card3.suit}</span> 
+                    <span id="board-card-3-suit_2">${player.cards.card3.suit}</span>
+                  </li>
+                  <li id="player-${player.playerNum}-card-4" class="card">
+                    <p id="board-card-5-value">${player.cards.card4.value}</p>
+                    <span id="board-card-5-suit_1">${player.cards.card4.suit}</span> 
+                    <span id="board-card-5-suit_2">${player.cards.card4.suit}</span>
+                  </li>
+                
                 </ul>
-            </li>`    
+            </li>`            
 })
 
 
 
 console.log(playerContainer)
-playersEl.innerHTML = playerContainer
+playersEl.innerHTML += playerContainer
 
 // let playerContainer =`
 // <!--player template repeat container->
