@@ -1,0 +1,833 @@
+/* --TABLE OF CONTENTS -- 
+1.Global
+2.Body
+3.Poker Table v2 Section (upmost parent container)
+4.Challenge Completed Section
+5.Physical Poker Table
+6.Table Pots
+7.Board Cards
+8.Poker Players
+   a.Fox
+   b.Monkey  
+   c.Rowdy Robert
+   d.Ellie Bellie
+   e.fly_birdie
+   f.My cards
+   g.Marie-Lou
+   h.Albert459
+   i.Vincent202
+9.Poker Hand Info
+10.Message Board
+11.Reparion
+12.Min Max Slider
+13.How Much will You Raise
+14.Text Box
+15.Player Personal Settings
+*/
+
+
+
+/*---GLOBAL---*/
+* {
+	margin: 0;
+	padding: 0;
+} 
+
+/*widths*/
+#poker-table-v2, 
+#message-board,
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options, 
+#slider,
+#text-area{
+ width:100%;
+}
+
+#message-board #what-will-you-do-next ul#reparion li,#min-max-slider :nth-child(4){
+width:4em;
+}
+
+ol#poker-players li ul:nth-child(1),
+#poker-hand-info p{
+width:10em; 
+}
+
+/*displaying flex*/
+#poker-table,
+#poker-table .table, 
+#poker-table ul#board-cards-container,
+#poker-table .table #table-pots,
+#challenge-completed, ol#poker-players li ul,
+ol#poker-players li ul:nth-child(2) .villian-dealer-button .chips,
+#message-board,
+#message-board #what-will-you-do-next ul#reparion, 
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options, 
+#message-board #what-will-you-do-next ul li:nth-child(1) button,
+#message-board #how-much-will-you-raise,
+#message-board #how-much-will-you-raise button,
+#text-area,
+aside#player-personal-settings{
+  display:flex;
+  justify-content:center;
+  align-items:center;  
+}
+
+/*positioning*/
+ul#board-cards-container li, 
+ol#poker-players, 
+.cards{
+position:relative;  
+}
+
+.exit-button, 
+#poker-table .table, 
+#poker-table .table #table-pots,
+li#player-1-container, 
+li#player-2-container, 
+li#player-3-container,
+li#player-4-container, 
+li#player-5-container,
+li#player-6-container,
+li#player-7-container,
+li#player-8-container, 
+li#player-9-container,
+.player-chip-container,
+.player-cards-container,
+.card p,
+.card span, 
+#poker-hand-info,
+#message-board,
+#message-board #what-will-you-do-next ul#reparion,
+#min-max-slider,
+#message-board #how-much-will-you-raise,
+#text-area,
+aside#player-personal-settings{
+position:absolute;  
+}
+
+#poker-table .table, 
+#poker-table .table #table-pots, 
+#challenge-completed, 
+ol#poker-players li ul:nth-child(1),
+aside#player-personal-settings{
+flex-direction:column;  
+}
+
+/*Colors and Opacities*/
+.exit-button:hover, #poker-table .table,
+#poker-hand-info,
+#message-board #what-will-you-do-next,
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options li button, 
+#min-max-slider button, 
+#min-max-slider :nth-child(4)::placeholder,
+#message-board #min-max-slider button:hover,
+#message-board #how-much-will-you-raise button,
+#text-area{
+color:#fff;    
+}
+
+#challenge-completed,
+.exit-button, 
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options li button:hover,
+#slider::-webkit-slider-thumb, 
+#message-board #min-max-slider button:hover{
+background-color:#fff;
+}
+
+#poker-table ul#board-cards-container li:nth-child(1),
+#poker-table ul#board-cards-container li:nth-child(2), 
+li#player-4-container ul#player-4-cards-container li:nth-child(1), 
+li#player-4-container ul#player-4-cards-container li:nth-child(2), 
+li#player-6-container ul#player-6-cards-container li:nth-child(1) {
+background-color:#269F27;  
+}
+
+#poker-table ul#board-cards-container li:nth-child(3),
+#poker-table ul#board-cards-container li:nth-child(4), 
+ol#poker-players li ul:nth-child(2) .villian-big-blind .chips, 
+li#player-2-container ul#player-2-cards-container li:nth-child(1), 
+li#player-4-container ul#player-4-cards-container li:nth-child(3), 
+li#player-6-container ul#player-6-cards-container li:nth-child(2),
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-big-blind .chips, 
+ol#poker-players li#player-7-container ul#player-7-lou-dollar-amount{
+background-color:#2764AA;   
+}
+
+#poker-table ul#board-cards-container li:nth-child(5), 
+ol#poker-players li ul:nth-child(2) .villian-small-blind .chips, 
+li#player-4-container ul#player-4-cards-container li:nth-child(4), 
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-small-blind .chips, 
+li#player-2-container ul#player-2-cards-container li{
+background-color:red;  
+}
+
+ol#poker-players li ul:nth-child(1), 
+ol#poker-players li ul:nth-child(2) .villian-dealer-button .chips, 
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-dealer-button .chips,
+.exit-button:hover,
+#poker-hand-info p,
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options li button,
+#message-board #min-max-slider button,
+#message-board #how-much-will-you-raise button:hover{
+background-color:#000;
+}
+
+
+#min-max-slider :nth-child(4),
+#message-board #how-much-will-you-raise button{
+background-color:#696969;  
+}
+
+
+li#player-3-container ul#player-3-dollar-amount, 
+li#player-8-container ul#player-8-dollar-amount{
+opacity:0.5;
+}
+
+li#player-2-container ul#player-2-dollar-amount, 
+li#player-5-container ul#player-5-dollar-amount{
+opacity:0.9;
+}
+
+/*list styling*/
+ol#poker-players, ol#poker-players li ul, 
+#poker-table ul#board-cards-container li, li#player-6-container ul#player-6-cards-container li,#message-board #what-will-you-do-next ul{
+list-style:none;  
+}
+
+/*global styling for the poker players chips (dealer button, small blind and big blind )*/
+ol#poker-players li ul:nth-child(2) .villian-dealer-button .chips, 
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-dealer-button .chips{
+color:#C3C3C3;
+}
+
+ol#poker-players li ul:nth-child(2) .villian-dealer-button .chips, 
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-dealer-button .chips,
+ol#poker-players li ul:nth-child(2) .chips, 
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-dealer-button .chips, 
+ol#poker-players li#player-6-container ul:nth-child(1) .chips{
+border:0.0625em solid #fff;  
+}
+
+ol#poker-players li ul:nth-child(2) .chips,
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-dealer-button .chips, 
+ol#poker-players li#player-6-container ul:nth-child(1) .chips{
+height:1.2em;
+width:1.2em;
+border-radius: 50%; 
+}
+
+ol#poker-players li ul:nth-child(2) li p, 
+ol#poker-players li#player-6-container ul:nth-child(1) li p{
+font-size:0.9em;
+}
+
+ol#poker-players li ul:nth-child(2) .villian-small-blind,
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-small-blind {
+margin-top:0.4em;    
+}
+
+ol#poker-players li ul:nth-child(2) .villian-big-blind .chips:nth-child(1), ol#poker-players li ul:nth-child(2) .villian-small-blind .chips:nth-child(1),
+ol#poker-players li ul:nth-child(3){
+z-index:1;  
+}
+
+#poker-table-v2, 
+ol#poker-players li ul:nth-child(2) .villian-big-blind .chips:nth-child(2), ol#poker-players li ul:nth-child(2) .villian-small-blind .chips:nth-child(2),
+ol#poker-players li ul:nth-child(1), 
+#poker-table .table{
+z-index:2;  
+}
+
+ol#poker-players li ul:nth-child(2) .villian-big-blind .chips:nth-child(3), ol#poker-players li#player-6-container ul:nth-child(1) .villian-big-blind .chips,
+#challenge-completed{
+z-index:3;     
+}
+
+ol#poker-players li ul:nth-child(2) .villian-big-blind .chips:nth-child(4), ol#poker-players li#player-6-container ul:nth-child(1) .villian-big-blind .chips{
+z-index:4;  
+}
+
+ol#poker-players li ul:nth-child(2) .villian-big-blind .chips:nth-child(2), ol#poker-players li ul:nth-child(2) .villian-small-blind .chips:nth-child(2), 
+ol#poker-players li ul:nth-child(2) .villian-big-blind .chips:nth-child(3), 
+ol#poker-players li ul:nth-child(2) .villian-big-blind .chips:nth-child(4),
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-big-blind .chips, 
+ol#poker-players li#player-6-container ul:nth-child(1) .villian-small-blind .chips{
+margin-top:-1.6em;       
+}
+
+li#player-1-container .player-chip-container, 
+li#player-2-container .player-chip-container {
+margin:4.2em 0 0 3em;   
+}
+
+li#player-1-container #player-1-chip-container .villian-dealer-button .chips, 
+li#player-2-container  #player-2-chip-container .villian-dealer-button .chips{
+margin:-6.5em 0 0 -3.4em;
+}
+
+li#player-3-container .player-chip-container, 
+li#player-4-container .player-chip-container {
+margin:1em 0 0 -3.5em;   
+}
+
+li#player-3-container #player-3-chip-container .villian-dealer-button .chips, 
+li#player-4-container  #player-4-chip-container .villian-dealer-button .chips{
+margin:-3.35em 0 0 -0.3em;
+}
+
+li#player-8-container #player-8-chip-container .villian-dealer-button, 
+li#player-9-container #player-9-chip-container .villian-dealer-button{
+margin:-5.5em 8.75em 0 0em;    
+}
+
+li#player-8-container .player-chip-container, 
+li#player-9-container .player-chip-container{
+margin:1em 0 0 0;     
+}
+
+/*global styling for the poker player's cards*/
+#player2-card-1 p,  
+#player2-card-2 p{
+margin-left:0.1em;
+margin-bottom:-1.2em;  
+}
+
+#player2-card-1 span#player2-card-1-suit_1, 
+#player2-card-2 span#player2-card-2-suit_1{
+margin:0.75em 0 0 0.1em;  
+}
+
+#player-2-card-1 span#player-2-card-1-suit_2, 
+#player-2-card-2 span#player-2-card-2-suit_2{
+font-size:1.8em;
+margin:3em 0 0 0.65em;
+}
+
+li#player-2-container ul#player-2-cards-container li, li#player-3-container ul#player-3-cards-container li{
+height:3.5em;
+width:2.3em;
+margin:-5em 0.2em 0 0.2em; 
+}
+
+li#player-2-container ul#player-2-cards-container li, li#player-3-container ul#player-3-cards-container li, #poker-table ul#board-cards-container li, 
+li#player-6-container ul#player-6-cards-container li{
+border:0.1em solid #fff;    
+}
+
+#poker-table ul#board-cards-container li, 
+li#player-6-container ul#player-6-cards-container li{
+height:4.5em;
+width:3.2em;
+margin:1em 0.2em 0 0.2em; 
+}
+
+li#player-3-container ul#player-3-cards-container li, 
+li#player-7-container ul#player-7-cards-container li{
+background-color:#B0AFB1; 
+}
+
+li#player-2-container ul#player-2-cards-container li, li#player-3-container ul#player-3-cards-container li,
+#poker-table ul#board-cards-container li, 
+li#player-6-container ul#player-6-cards-container li,
+li#player-4-container ul#player-4-cards-container li,
+li#player-7-container ul#player-7-cards-container li{
+border-radius:0.25em;    
+}
+
+li#player-4-container ul#player-4-cards-container li, 
+li#player-7-container ul#player-7-cards-container li{
+height:2.7em;
+width:1.7em;
+border:0.1em solid #fff; 
+}
+
+li#player-4-container ul#player-4-cards-container, li#player-7-container ul#player-7-cards-container{
+margin:-2em 0 0 1.5em;
+}
+
+li#player-4-container ul#player-4-cards-container li, 
+li#player-7-container ul#player-7-cards-container li{   
+margin:0 0.1em 0 0.1em;  
+}
+
+/*font weights*/
+#message-board #what-will-you-do-next ul li button,
+#min-max-slider button{
+font-weight:bold;  
+}
+
+#slider, #slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+}
+
+/*border styling*/
+#poker-table .table #table-pots > *, 
+ol#poker-players li ul:nth-child(1),
+#text-area, 
+#challenge-completed{
+border-radius:0.5em;  
+}
+
+#slider, #slider::-webkit-slider-thumb, #min-max-slider :nth-child(4),  
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options li button, 
+#message-board #what-will-you-do-next ul#reparion, 
+#message-board #what-will-you-do-next ul#reparion li,
+#message-board #how-much-will-you-raise button,
+#text-area p,
+aside#player-personal-settings img{
+border-radius:0.2em;
+} 
+
+
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options li button,
+#min-max-slider button, 
+#message-board #how-much-will-you-raise button,
+#player-personal-settings button{
+border:none;
+}
+
+#message-board #what-will-you-do-next ul#reparion li:nth-child(2), #message-board #what-will-you-do-next ul#reparion li:nth-child(3), #message-board #what-will-you-do-next ul#reparion li:nth-child(4){
+border-left:none;  
+}
+
+aside#player-personal-settings button:nth-child(3),aside#player-personal-settings button:nth-child(2),
+aside#player-personal-settings button:nth-child(4){
+border-left:0.25em solid #171717;  
+border-right:0.25em solid #171717;  
+border-bottom:0.25em solid #171717;   
+}
+
+/*font-size*/
+li#player-2-container ul#player-2-cards-container li p,
+li#player-4-container ul#player-4-cards-container li p, 
+li#player-4-container ul#player-4-cards-container > li span:nth-child(2),
+li#player-2-container ul#player-2-cards-container li p{
+font-size:0.8em;  
+}
+
+#player-2-card-1 span#player-2-card-1-suit_1, 
+#player-2-card-2 span#player-2-card-2-suit_1, 
+li#player-4-container ul#player-4-cards-container > li span:nth-child(3){
+font-size:1.1em;
+}
+
+/*cursor pointer*/
+.exit-button, 
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options li button, 
+#slider::-webkit-slider-thumb,
+#message-board #min-max-slider button,
+#message-board #how-much-will-you-raise button,
+#player-personal-settings button{
+cursor:pointer;    
+}
+
+/*aligning text*/
+#poker-table .table #table-pots > *, 
+ol#poker-players li ul:nth-child(1),
+#poker-hand-info p,
+#message-board #what-will-you-do-next ul#reparion li{
+text-align:center;
+}
+
+/*margins*/
+li#player-4-container ul#player-4-cards-container > li:nth-child(3) span:nth-child(2),li#player-4-container ul#player-4-cards-container > li:nth-child(4) span:nth-child(2){
+margin-left:0.1em; 
+}
+
+
+/*----------INDIVIDUAL STYLING BEGINS---------*/
+/*---BODY---*/
+body {
+font-family: Serif;
+background-color: #676769;
+}
+
+/*---POKER TABLE V2---*/
+#poker-table-v2{
+ height:47em;
+}
+
+/*---CHALLENGE COMPLETED---*/
+#challenge-completed{
+height:10em;
+width:45%;
+margin-left:0.5em;
+margin-top:0.5em;      
+}
+
+.exit-button{
+border:0.1em solid #000;
+border-radius:1.5em; 
+height:1.5em;
+width:1.5em;  
+top:1.25em;
+left:57.25em;  
+}
+
+#challenge-completed h4{
+margin-top:0.2em;  
+opacity:0.5;   
+}
+
+/*---THE PHYSICAL POKER TABLE---*/
+#poker-table .table{
+  height:30em;
+  width: 62em;
+  background-color: #151515;
+  border-radius: 20em; 
+  border:2em solid #090805;
+  margin-top:25em;
+}
+
+/*---POKER PLAYERS---*/
+ol#poker-players > li{
+display:grid;
+grid-template-columns:33.33% 33.33% 33.33% 33.33% 33.33% 33.33% 33.33% 33.33% 33.33%;  
+grid-template-columns:10em;  
+}
+
+/*---TABLE POTS---*/
+#poker-table .table #table-pots{
+margin-top:-10em;  
+}
+
+#poker-table .table #table-pots > *{
+margin-bottom:0.5em;  
+background-color:#333333; 
+padding:0 1em;  
+font-weight:normal;  
+}
+
+/*---BOARD CARDS---*/
+ul#board-cards-container li span:nth-child(2), ol#poker-players li#player-6-container ul#player-6-cards-container li span:nth-child(2){
+font-size:1.3em;   
+margin:-0.3em 0 0 0.1em;  
+}
+
+ul#board-cards-container li span:nth-child(3), ol#poker-players li#player-6-container ul#player-6-cards-container li span:nth-child(3){
+font-size:2.5em;   
+margin:0.2em 0 0 0.6em;  
+}
+
+ul#board-cards-container li p, ol#poker-players li#player-6-container ul#player-6-cards-container li p {
+margin-left:0.15em;    
+}
+
+#poker-table ul#board-cards-container li.card span, ol#poker-players li#player-6-container ul#player-6-cards-container li.card span, li#player-2-container ul#player-2-cards-container li.card span, li#player-4-container ul#player-4-cards-container li.card span{
+margin-top:0.7em;
+}
+
+/*---POKER PLAYERS---*/
+ol#poker-players li ul:nth-child(1){
+padding:0.5em 0; 
+}
+
+ol#poker-players li ul:nth-child(2) li{
+margin:0 0.2em 0 0.2em;  
+}
+
+.player-chip-container .villian-dealer-button{
+margin:-2.2em 0 0 -0.3em;  
+}
+
+/*---FOX---*/
+li#player-1-container{
+margin:-21.5em 0 0 -20em; 
+}
+
+/*---MONKEY---*/
+li#player-2-container{
+margin:-21.5em 0 0 10em;  
+}
+
+     /*--Monkey Cards --*/
+li#player-2-container ul#player-2-cards-container{
+margin:1.5em 0 0 2em;
+}
+
+/*---ROWDY ROBERT---*/
+li#player-3-container{
+margin:-14em 0 0 25em;
+}
+
+        /*--Rowdy Roberts Cards--*/
+li#player-3-container ul#player-3-cards-container{
+margin:2em 0 0 3em;
+}
+
+li#player-3-container ul#player-3-cards-container li:nth-child(1){
+-ms-transform: rotate(-5deg); /* IE 9 */
+-webkit-transform: rotate(-5deg); /* Safari 3-8 */
+transform: rotate(-5deg);     
+}
+
+li#player-3-container ul#player-3-cards-container li:nth-child(2){
+-ms-transform: rotate(5deg); /* IE 9 */
+-webkit-transform: rotate(5deg); /* Safari 3-8 */
+transform: rotate(5deg);  
+margin-left:-2em;  
+}
+
+/*---ELLIE BELLIE---*/
+li#player-4-container{
+margin:-3em 0 0 28em;
+}
+
+      /*--Ellie Bellie Cards--*/
+li#player-4-container ul#player-4-cards-container li p{
+margin-left:0.1em;  
+}
+
+li#player-4-container ul#player-4-cards-container > li span:nth-child(3){
+margin:0.9em; 
+}
+
+/*---FLY_BIRDIE---*/
+li#player-5-container{
+margin:9em 0 0 17em;
+}
+
+    /*--Fly_Birdie Cards--*/
+li#player-5-container ul#player-5-chip-container{
+margin:-1.7em 0 0 -0.4em; 
+}
+
+li#player-5-container ul#player-5-chip-container .villian-big-blind{
+margin:-0.6em 0 0 2.5em; 
+}
+
+li#player-5-container ul#player-5-chip-container .villian-small-blind{
+margin:0 0 0 0.4em;   
+}
+
+/*---MY CARDS---*/
+li#player-6-container{
+margin:8.3em 0 0 -3em;   
+}
+     
+       /*--My Chips--*/
+ol#poker-players li#player-6-container ul#player-6-chip-container{
+background-color:transparent; 
+margin:0.6em 0 0 -4.25em;  
+}
+
+ol#poker-players li#player-6-container ul#player-6-chip-container .villian-dealer-button{
+margin:-1.8em 0 -0.45em -0.35em;  
+}
+
+ol#poker-players li#player-6-container ul#player-6-chip-container .villian-big-blind{
+margin:0.9em 0 1em 4.5em;  
+}
+
+ol#poker-players li#player-6-container ul#player-6-chip-container .villian-small-blind{
+margin:-1em 0 0 7.9em;  
+}
+
+     
+       /*--My Cards--*/
+ol#poker-players li#player-6-container ul#player-6-cards-container p{
+font-size:1em;
+}
+
+/*---MARIE LOU---*/
+ol#poker-players li#player-7-container{
+margin:8.7em 0 0 -27em;
+}
+
+ol#poker-players li#player-7-container ul#player-7-dollar-amount{
+background-color:#2764AA;  
+opacity:0.8;
+border:0.09em solid #fff;  
+}
+
+      /*--Marie Lou Chip Container--*/
+ol#poker-players li#player-7-container ul#player-7-chip-container{
+margin:-4em 0 0 2em;  
+}
+
+ol#poker-players li#player-7-container ul#player-7-chip-container .villian-dealer-button{
+margin:2.3em 0 0 -2.2em;  
+}
+
+ol#poker-players li#player-7-container ul#player-7-chip-container .villian-big-blind{
+margin:-2.2em 0 0 2.5em;  
+}
+
+ol#poker-players li#player-7-container ul#player-7-chip-container .villian-small-blind{
+margin:-1.7em 0 0 0.4em;  
+}
+
+/*---ALBERT---*/
+ol#poker-players li#player-8-container{
+margin:-3em 0 0 -38.1em;
+}
+
+/*---VINCENT---*/
+ol#poker-players li#player-9-container{
+margin:-14em 0 0 -35.1em; 
+}
+
+/*---POKER HAND INFO---*/
+#poker-hand-info{
+margin:40.5em 0 0 44%;  
+}
+
+#poker-hand-info p{
+margin-bottom:0.5em;  
+padding:0.3em;  
+}
+
+/*---MESSAGE BOARD---*/
+#message-board{
+background-color:#2B2B2B;
+margin:44em 0 0 0;  
+height:30em;  
+}
+
+#message-board #what-will-you-do-next{
+margin-top:-20.5em; 
+}
+
+/*---REPARION---*/
+#message-board #what-will-you-do-next ul#reparion{
+margin:-3.5em 0 0 -6em;  
+background-color:#515151; 
+border: 0.15625em solid #515151;  
+}
+
+#message-board #what-will-you-do-next ul#reparion li{
+border:0.15625em solid #171717;  
+padding:0.1em 3em; 
+}
+
+#message-board #what-will-you-do-next ul#reparion li:nth-child(2){
+margin-left:-0.1em;  
+}
+
+#message-board #what-will-you-do-next ul#reparion li:nth-child(3){
+margin-left:-1.1em;  
+}
+
+#message-board #what-will-you-do-next ul#reparion li:nth-child(4){
+margin-left:-0.1em;  
+}
+
+#message-board #what-will-you-do-next p{
+margin:0 0 1em 9.4em;  
+}
+
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options{
+margin:0 0 0 0.6em;  
+}
+
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options li button{
+padding:0.5em 3em;
+}
+
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options li:nth-child(1) button{
+padding:0.3em 3em;
+}
+
+#message-board #what-will-you-do-next ul li:nth-child(2){
+margin:0 1em;  
+}
+
+#message-board #what-will-you-do-next ul li:nth-child(1) button span{
+color:#D11919;   
+margin:0.1em 0.3em 0 0;    
+}
+
+#message-board #what-will-you-do-next ul li:nth-child(2) button span{
+color:#21B369;    
+}
+
+#message-board #what-will-you-do-next ul li:nth-child(3) button span{
+color:#CD7A2A;
+}
+
+/*---MIN MAX SLIDER---*/
+#min-max-slider{
+margin:-6em 0 0 0.6em;  
+}
+
+#min-max-slider input#slider{
+width:20em;  
+background-color:#5E5E5E;
+}
+
+#slider {
+  height:0.5em;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+#slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 1.5625em;
+  height: 1.2em;
+}
+
+#min-max-slider button{
+width:1.5em; 
+height:1.5em;
+border-radius:1em;  
+background-color:#5F5F5F; 
+font-size:0.9em;  
+}
+
+#message-board #what-will-you-do-next ul#what-will-you-do-next-options li button:hover{
+color:#000;
+}
+
+#min-max-slider :nth-child(4){
+text-align:right;
+padding-right:0.2em;
+}
+
+/*---HOW MUCH WILL YOU RAISE---*/
+#message-board #how-much-will-you-raise{
+margin:-3em 0 0 0.75em;  
+}
+
+#message-board #how-much-will-you-raise button{
+white-space:pre;  
+margin:0 0.5em 0 0.5em;
+width:6.5em;
+padding:0.3em 3em;  
+}
+
+/*---TEXT BOX---*/
+#text-area {
+margin:59em 0 0 0;
+}
+
+#text-area p{
+width:40%;  
+background-color:#171717;  
+border:2px solid #090805;
+padding:1em; 
+margin-left:1em;  
+}
+
+/*---PLAYER PERSONAL SETTINGS---*/
+aside#player-personal-settings {
+margin:45em 0 0 95%;
+}
+
+#player-personal-settings button{
+background-color:#272727;  
+width:5em;
+padding:1.4em 1em;  
+}
+
+#player-personal-settings button:hover{
+background-color:#171717;  
+}
+
+aside#player-personal-settings button:nth-child(1){
+border:0.25em solid #171717; 
+}  
+
