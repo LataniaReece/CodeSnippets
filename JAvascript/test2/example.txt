@@ -1,0 +1,54 @@
+<!--player template repeat container-->
+              <li id="player-2-container" label="repeat-region">
+                <!--Monkey Dollar Amount-->
+                <ul id="player-2-dollar-amount">
+                  <h3>Monkey</h3>
+                  <p>$11.18</p>
+                </ul>
+                <!--Monkey Chip Container-->
+                <ul id="player-2-chip-container" class="player-chip-container">
+                             
+                
+                    <li class="villian-big-blind">
+                        <div class="chips"></div>
+                        <div class="chips"></div>
+                        <div class="chips"></div>
+                        <div class="chips"></div>
+                    </li>     
+                    <li class="villian-small-blind">
+                        <div class="chips"></div>
+                        <div class="chips"></div>
+                    </li>
+
+                    <li class="villian-dealer-button">
+                        <div class="chips">
+                        <p>D</p>
+                        </div>
+                    </li>   
+                
+                </ul>
+                <ul id="player-2-cards-container" class="player-cards-container">
+          <li id="player-2-card-1" class="card">
+            <p id="board-card-2-value">1</p>
+            <span id="board-card-2-suit_1">&diams;</span> 
+            <span id="board-card-2-suit_2">&diams;</span>
+          </li>
+          <li id="player-2-card-2" class="card">
+            <p id="board-card-2-value">3</p>
+            <span id="board-card-2-suit_1">&#9829;</span> 
+            <span id="board-card-2-suit_2">&#9829;</span>
+          </li>
+        </ul>
+                <ul id="player-2-cards-container" class="player-cards-container">
+          <li id="player-2-card-1" class="card">
+            <p id="board-card-2-value">1</p>
+            <span id="board-card-2-suit_1">&diams;</span> 
+            <span id="board-card-2-suit_2">&diams;</span>
+          </li>
+          <li id="player-2-card-2" class="card">
+            <p id="board-card-2-value">3</p>
+            <span id="board-card-2-suit_1">&#9829;</span> 
+            <span id="board-card-2-suit_2">&#9829;</span>
+          </li>
+        </ul>
+            </li>

@@ -1,0 +1,146 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: #676769;
+  font-family: Serif;
+}
+
+
+/* Game Choice */
+#game-choice {
+  margin: 1em 2em 2em 30em;
+  width: 10em;
+  height: 2em;
+  font-size: 1em;
+}
+
+/* Table */
+#poker-table{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #151515;
+  height: 30em;
+  width: 62em;
+  border-radius: 20em;
+  border: 2em solid #090805;
+  margin-top: 25em;
+  z-index: 2;
+  color: #fff;
+}
+
+/*positioning*/
+ul#board-cards-container li, 
+ol#poker-players, 
+.cards{
+position:relative;  
+}
+
+/* Players */
+.player-container{
+  border: 2px solid red;
+  width: 15em;
+  height: 15em;
+  list-style: none;
+  display:grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 0;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+  'dealer cards'
+  'info info'
+  'chips chips';
+
+}
+
+.player-info{
+  grid-area: info;
+  background-color: #000;
+  padding: 0.5em 0;
+  width: auto;
+  list-style: none;
+  text-align: center;
+  border-radius: 0.5em;
+}
+
+/* Cards */
+.card {
+  grid-area: cards;
+  background: green;
+  border:0.1em solid #fff;  
+  height:3.7em;
+  width:2.3em;
+  color: white;
+  list-style:none;
+}
+
+.player-cards-container {
+  border: 2px solid purple;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Chips */
+.player-chip-container {
+
+  list-style: none;
+  grid-area: chips;
+  display: flex;
+  border: 2px solid gray;
+  padding: 1em;
+
+}
+.chips {  
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 50%;
+  border: 0.0625em solid #fff;
+}
+
+.small-blind .chips {
+  background-color: red;
+}
+
+.small-blind .chips:nth-child(1){
+  z-index: 1;
+}
+
+.small-blind .chips:nth-child(2){
+  margin-top: -1.6em;
+  z-index: 2;
+}
+
+.big-blind .chips {
+  background-color: rgb(39, 100, 170);
+  margin-right: 0.3em;
+}
+
+.big-blind .chips:nth-child(1){
+  z-index:1;
+}
+.big-blind .chips:nth-child(2){
+  margin-top: -1.6em;
+  z-index: 2;
+}
+.big-blind .chips:nth-child(3){
+  margin-top: -1.6em;
+  z-index:3;
+}
+.big-blind .chips:nth-child(4){
+  margin-top: -1.6em;
+  z-index:4;
+}
+
+/* Dealer Button */
+.dealer-button{
+  grid-area: dealer;
+  background-color: black;
+  text-align: center;
+  color: #BDC3C3;
+}
+

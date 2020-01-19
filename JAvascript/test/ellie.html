@@ -1,0 +1,25 @@
+if query == "" 
+
+  
+         <!--Marie Lou Cards Container-->
+            `<ul id="player-${player.playerNum}-cards-container" class="player-cards-container">
+              <li id="player-${player.playerNum}-card-1" class="card">
+              </li>
+              <li id="player-${player.playerNum}-card-2" class="card">
+              </li>
+            </ul>      
+          </li>`   
+
+if query != null || query != ""
+      `<ul id="player-${player.playerNum}-cards-container" class="player-cards-container">
+              <li id="player-${player.playerNum}-${player.cards.card1.name}" class="card">
+                <p id="board-card-2-value">${player.cards.card1.value}</p>
+                <span id="board-card-2-suit_1">${player.cards.card1.suit}</span> 
+                <span id="board-card-2-suit_2">${player.cards.card1.suit}</span>
+              </li>
+              <li id="player-${player.playerNum}-card-2" class="card">
+                <p id="board-card-2-value">${player.cards.card2.value}</p>
+                <span id="board-card-2-suit_1">${player.cards.card2.suit}</span> 
+                <span id="board-card-2-suit_2">${player.cards.card2.suit}</span>
+              </li>
+            </ul>`  

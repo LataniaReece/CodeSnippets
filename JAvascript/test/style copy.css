@@ -336,13 +336,13 @@ border-radius:0.25em;
 
 li#player-4-container ul#player-4-cards-container li, 
 li#player-7-container ul#player-7-cards-container li{
-height:3.5em;
-width:2.3em;
+height:2.7em;
+width:1.7em;
 border:0.1em solid #fff; 
 }
 
 li#player-4-container ul#player-4-cards-container, li#player-7-container ul#player-7-cards-container{
-margin:-3.2em 0 0 2.5em;
+margin:-2em 0 0 1.5em;
 }
 
 li#player-4-container ul#player-4-cards-container li, 
@@ -514,7 +514,7 @@ margin-left:0.15em;
 }
 
 #poker-table ul#board-cards-container li.card span, ol#poker-players li#player-6-container ul#player-6-cards-container li.card span, li#player-2-container ul#player-2-cards-container li.card span, li#player-4-container ul#player-4-cards-container li.card span{
-margin-top:1em;
+margin-top:0.7em;
 }
 
 /*---POKER PLAYERS---*/
@@ -544,15 +544,6 @@ margin:-21.5em 0 0 10em;
 li#player-2-container ul#player-2-cards-container{
 margin:1.5em 0 0 2em;
 }
-
-li#player-2-container ul#player-2-cards-container li p{
-  margin-left:0.1em;  
-  }
-
-li#player-2-container ul#player-2-cards-container > li span:nth-child(3){
-  font-size:1.5em; 
-  margin:0.9em; 
-  }
 
 /*---ROWDY ROBERT---*/
 li#player-3-container{
@@ -589,7 +580,6 @@ margin-left:0.1em;
 
 li#player-4-container ul#player-4-cards-container > li span:nth-child(3){
 margin:0.9em; 
-font-size: 1.4em;
 }
 
 /*---FLY_BIRDIE---*/
