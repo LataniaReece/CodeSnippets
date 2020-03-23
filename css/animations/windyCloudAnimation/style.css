@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.sky{
+    height: 40vh;
+    background-color: lightblue;
+}
+.grass {
+    height: 60vh;
+    background-color: green;
+}
+
