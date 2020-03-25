@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+body {
+    overflow: hidden;
+}
+
 .sky{
     height: 40vh;
     background-color: lightblue;
@@ -10,5 +14,35 @@
 .grass {
     height: 60vh;
     background-color: green;
+}
+
+.cloud {
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    
+}
+
+.cloud:nth-child(1){
+    animation: wind 10s linear forwards;
+}
+
+.cloud:nth-child(2){
+    left: 100px;
+    top: 40px;    
+    opacity: 0.65;
+    animation: wind 10.2s linear forwards;
+}
+
+@keyframes wind {
+    from{
+        transform: translate(0%) 
+    }
+    to{
+        transform: translate(2000px) 
+    }
 }
 
